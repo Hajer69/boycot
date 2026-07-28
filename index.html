@@ -36,10 +36,10 @@
   <button class="nav-btn" data-section="food" onclick="loadCategory('food', this)"><span class="nav-icon">🍽️</span> أكل</button>
   <button class="nav-btn" data-section="personal" onclick="loadCategory('personal', this)"><span class="nav-icon">🧴</span> عناية</button>
   <button class="nav-btn" data-section="cleaning" onclick="loadCategory('cleaning', this)"><span class="nav-icon">🧹</span> تنظيف</button>
-  <button class="nav-btn" data-section="tech" onclick="loadCategory('tech', this)"><span class="nav-icon">💻</span> تقنية</button>
+  <button class="nav-btn" data-section="tech" onclick="loadCategory('tech', this)"><span class="nav-icon">💻</span> التقنية</button>
   <button class="nav-btn" data-section="clothing" onclick="loadCategory('clothing', this)"><span class="nav-icon">👕</span> ملابس</button>
   <button class="nav-btn" data-section="restaurants" onclick="loadCategory('restaurants', this)"><span class="nav-icon">☕</span> مطاعم</button>
-  <button class="nav-btn" data-section="sports" onclick="loadCategory('sports', this)"><span class="nav-icon">🏃</span> رياضة</button>
+  <button class="nav-btn" data-section="sports" onclick="loadCategory('sports', this)"><span class="nav-icon">🏃</span> الرياضة</button>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -72,9 +72,13 @@
     <span class="legend-item"><span class="dot-swatch" style="background:var(--green)"></span> آمن</span>
   </div>
 
+  <div id="allPagination" class="all-pagination" style="display:none"></div>
+
   <div id="content-area">
     <div class="loader"><span>⏳</span> جاري التحميل...</div>
   </div>
+
+  <div id="allPaginationBottom" class="all-pagination" style="display:none"></div>
 
   <div class="empty" id="emptyState" style="display:none">
     <div class="empty-icon">🔍</div>
@@ -98,66 +102,168 @@
   let currentType = 'all';
   let isListView = false;
 
+  // قائمة الأقسام بترتيبها (تُستخدم في وضع "الكل" للتنقل بين الصفحات الفرعية)
+  const CATEGORIES = [
+    { id: 'food',        label: 'الأغذية والمشروبات', icon: '🍽️' },
+    { id: 'personal',    label: 'العناية الشخصية',     icon: '🧴' },
+    { id: 'cleaning',    label: 'منتجات التنظيف',      icon: '🧹' },
+    { id: 'tech',        label: 'التقنية',              icon: '💻' },
+    { id: 'clothing',    label: 'الملابس والأحذية',     icon: '👕' },
+    { id: 'restaurants', label: 'المطاعم والمقاهي',     icon: '☕' },
+    { id: 'sports',      label: 'الرياضة',              icon: '🏃' },
+  ];
+
+  let allPageIndex = 0;          // الصفحة الحالية داخل وضع "الكل"
+  let globalStats = null;        // إجمالي عدد المنتجات (مُقاطَع/آمن) على مستوى الموقع كامل
+  let currentMode = 'all';       // 'all' (متعدد الصفحات) أو 'single' (قسم واحد من شريط التنقل)
+
   // ===== تحميل المحتوى =====
   function loadCategory(categoryId, btn) {
     document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
     if (btn) btn.classList.add('active');
 
+    if (categoryId === 'all') {
+      currentMode = 'all';
+      allPageIndex = 0;
+      loadAllPage(0);
+      ensureGlobalStats();
+    } else {
+      currentMode = 'single';
+      hidePagination();
+      loadSingleCategory(categoryId);
+    }
+  }
+
+  // ===== تحميل قسم واحد (يُستخدم من شريط التنقل مباشرة) =====
+  function loadSingleCategory(categoryId) {
     const area = document.getElementById('content-area');
     document.getElementById('emptyState').style.display = 'none';
-
-    let files = [];
-    if (categoryId === 'all') {
-      files = ['food', 'personal', 'cleaning', 'tech', 'clothing', 'restaurants', 'sports'];
-    } else {
-      files = [categoryId];
-    }
-
     area.innerHTML = '<div class="loader"><span>⏳</span> جاري التحميل...</div>';
 
-    let loadedCount = 0;
-    let allHtml = '';
+    fetch(`${categoryId}.html`)
+      .then(response => {
+        if (!response.ok) throw new Error(`الملف ${categoryId}.html غير موجود`);
+        return response.text();
+      })
+      .then(html => {
+        area.innerHTML = html;
+        document.querySelectorAll('.section').forEach(s => s.dataset.activeSub = 'all');
+        applyTypeFilter(currentType);
+        updateSectionCounts();
+        updateStats();
+        handleSearch();
+      })
+      .catch(error => {
+        console.error('خطأ في التحميل:', error);
+        area.innerHTML = `<div class="loader">❌ حدث خطأ في تحميل قسم ${categoryId}</div>`;
+      });
+  }
 
-    files.forEach(id => {
-      fetch(`${id}.html`)
-        .then(response => {
-          if (!response.ok) throw new Error(`الملف ${id}.html غير موجود`);
-          return response.text();
-        })
-        .then(html => {
-          allHtml += html;
-          loadedCount++;
-          if (loadedCount === files.length) {
-            area.innerHTML = allHtml;
-            // تهيئة الفلتر الفرعي لكل قسم
-            document.querySelectorAll('.section').forEach(s => s.dataset.activeSub = 'all');
-            applyTypeFilter(currentType);
-            updateSectionCounts();
-            updateStats();
-            handleSearch();
-          }
-        })
-        .catch(error => {
-          console.error('خطأ في التحميل:', error);
-          if (categoryId === 'all') {
-            loadedCount++;
-            if (loadedCount === files.length) {
-              area.innerHTML = allHtml || '<div class="loader">حدث خطأ في تحميل بعض الأقسام</div>';
-              applyTypeFilter(currentType);
-              updateSectionCounts();
-              updateStats();
-            }
-          } else {
-            area.innerHTML = `<div class="loader">❌ حدث خطأ في تحميل قسم ${categoryId}</div>`;
-          }
-        });
+  // ===== تحميل صفحة فرعية ضمن وضع "الكل" (قسم واحد فقط في كل مرة) =====
+  function loadAllPage(index) {
+    allPageIndex = ((index % CATEGORIES.length) + CATEGORIES.length) % CATEGORIES.length;
+    const cat = CATEGORIES[allPageIndex];
+    const area = document.getElementById('content-area');
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('searchInput').value = '';
+    area.innerHTML = '<div class="loader"><span>⏳</span> جاري التحميل...</div>';
+    renderPagination();
+
+    fetch(`${cat.id}.html`)
+      .then(response => {
+        if (!response.ok) throw new Error(`الملف ${cat.id}.html غير موجود`);
+        return response.text();
+      })
+      .then(html => {
+        area.innerHTML = html;
+        document.querySelectorAll('.section').forEach(s => s.dataset.activeSub = 'all');
+        applyTypeFilter(currentType);
+        updateSectionCounts();
+        updateStats();
+        window.scrollTo({ top: document.getElementById('content-area').offsetTop - 130, behavior: 'smooth' });
+      })
+      .catch(error => {
+        console.error('خطأ في التحميل:', error);
+        area.innerHTML = `<div class="loader">❌ حدث خطأ في تحميل قسم ${cat.id}</div>`;
+      });
+  }
+
+  // ===== أزرار التنقل بين صفحات "الكل" =====
+  function goToAllPage(index) {
+    loadAllPage(index);
+  }
+
+  function renderPagination() {
+    const cat = CATEGORIES[allPageIndex];
+    const dots = CATEGORIES.map((c, i) =>
+      `<button class="page-dot ${i === allPageIndex ? 'active' : ''}" title="${c.label}" onclick="goToAllPage(${i})">${c.icon}</button>`
+    ).join('');
+
+    const html = `
+      <div class="pagination-bar">
+        <button class="page-arrow" onclick="goToAllPage(${allPageIndex - 1})" title="القسم السابق">›</button>
+        <div class="pagination-mid">
+          <div class="pagination-current">${cat.icon} ${cat.label}</div>
+          <div class="pagination-dots">${dots}</div>
+          <div class="pagination-count">${allPageIndex + 1} من ${CATEGORIES.length}</div>
+        </div>
+        <button class="page-arrow" onclick="goToAllPage(${allPageIndex + 1})" title="القسم التالي">‹</button>
+      </div>`;
+
+    ['allPagination', 'allPaginationBottom'].forEach(id => {
+      const el = document.getElementById(id);
+      el.innerHTML = html;
+      el.style.display = 'flex';
     });
   }
 
+  function hidePagination() {
+    ['allPagination', 'allPaginationBottom'].forEach(id => {
+      const el = document.getElementById(id);
+      el.style.display = 'none';
+      el.innerHTML = '';
+    });
+  }
+
+  // ===== حساب إجمالي المنتجات على مستوى الموقع (بدون تحميل الصور) =====
+  // نجلب ملفات الأقسام كنص فقط ونحلّلها بمحلل DOM منفصل غير متصل بالصفحة،
+  // فلا يتم طلب أي صورة من الشبكة، ويبقى العدّاد في الأعلى يعكس إجمالي الموقع
+  // بغض النظر عن أي صفحة فرعية معروضة حالياً.
+  function ensureGlobalStats() {
+    if (globalStats) {
+      applyGlobalStatsToHero();
+      return;
+    }
+    Promise.all(CATEGORIES.map(c => fetch(`${c.id}.html`).then(r => r.ok ? r.text() : '')))
+      .then(htmls => {
+        const parser = new DOMParser();
+        let boycott = 0, safe = 0;
+        htmls.forEach(html => {
+          const doc = parser.parseFromString(html, 'text/html');
+          boycott += doc.querySelectorAll('.card.boycott').length;
+          safe += doc.querySelectorAll('.card.safe').length;
+        });
+        globalStats = { boycott, safe };
+        applyGlobalStatsToHero();
+      })
+      .catch(err => console.error('تعذّر حساب الإحصائيات الإجمالية:', err));
+  }
+
+  function applyGlobalStatsToHero() {
+    if (!globalStats) return;
+    document.getElementById('boycottCount').textContent = globalStats.boycott;
+    document.getElementById('safeCount').textContent = globalStats.safe;
+  }
+
   // ===== تحديث الإحصائيات =====
+  // في وضع "الكل" يبقى العدّاد في الأعلى يعكس إجمالي الموقع (من ensureGlobalStats)
+  // وما يتغيّر مع تنقّل الصفحات الفرعية أو الفلاتر. أما عند عرض قسم واحد من شريط
+  // التنقل مباشرة، فيعكس العدّاد عدد المنتجات الظاهرة في ذلك القسم فقط.
   function updateStats() {
-    document.getElementById('boycottCount').textContent = document.querySelectorAll('.card.boycott:not(.hidden)').length;
-    document.getElementById('safeCount').textContent = document.querySelectorAll('.card.safe:not(.hidden)').length;
+    if (currentMode === 'single') {
+      document.getElementById('boycottCount').textContent = document.querySelectorAll('.card.boycott:not(.hidden)').length;
+      document.getElementById('safeCount').textContent = document.querySelectorAll('.card.safe:not(.hidden)').length;
+    }
   }
 
   // ===== تحديث عدادات الأقسام =====
