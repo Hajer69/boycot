@@ -1,0 +1,341 @@
+<!-- ============================================================ -->
+<!-- ========== الأغذية والمشروبات (FOOD) ========== -->
+<!-- ============================================================ -->
+<section class="section visible" id="sec-food">
+  <div class="section-header">
+    <div class="section-icon">🍽️</div>
+    <h2 class="section-title">الأغذية والمشروبات</h2>
+    <span class="section-count" id="count-food">٠</span>
+  </div>
+
+  <!-- ===== شريط التصفية الفرعي (Sub-filter) ===== -->
+  <div class="sub-filter">
+    <button class="sub-btn active" data-section="food" data-sub="all" onclick="filterSubCategory('food', 'all', this)">🏷️ الكل</button>
+    <button class="sub-btn" data-section="food" data-sub="drinks" onclick="filterSubCategory('food', 'drinks', this)">🥤 مشروبات</button>
+    <button class="sub-btn" data-section="food" data-sub="coffee" onclick="filterSubCategory('food', 'coffee', this)">☕ قهوة</button>
+    <button class="sub-btn" data-section="food" data-sub="fastfood" onclick="filterSubCategory('food', 'fastfood', this)">🍟 وجبات سريعة</button>
+    <button class="sub-btn" data-section="food" data-sub="snacks" onclick="filterSubCategory('food', 'snacks', this)">🍪 وجبات خفيفة</button>
+    <button class="sub-btn" data-section="food" data-sub="chocolate" onclick="filterSubCategory('food', 'chocolate', this)">🍫 شكلاته</button>
+  </div>
+
+  <!-- ===== 1. المشروبات (data-sub="drinks") ===== -->
+  <div class="product-grid" data-sub="drinks">
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://wasmenia.com/_next/image?url=https%3A%2F%2Fstrapi.wasmenia.com%2Fuploads%2FCoca_Cola_01_0a88e536ad.svg&w=828&q=75" alt="Coca-Cola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Coca-Cola</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/30/1/pepsi-vertical-logo-png_seeklogo-301642.png" alt="Pepsi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍋</span></div>
+        <div class="card-info"><div class="card-name">Pepsi</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbtAUkMjA-owGKyRk-7eTcWVzBbnsifj3HX62in_RXTpj2AOaf77HNaU9O&s=10" alt="Tropicana" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Tropicana</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card safe" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWvz__XBzrwVw5Onaua73nfSqUBOhxNHPZC-dsOMW0PQ&s=10" alt="عصائر طبيعية" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌿</span></div>
+        <div class="card-info"><div class="card-name">عصائر طبيعية</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 2. قهوة (data-sub="coffee") ===== -->
+  <div class="product-grid" data-sub="coffee">
+    <div class="card boycott" data-sub="coffee">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/16/1/starbucks-logo-png_seeklogo-168511.png" alt="Starbucks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Starbucks</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="coffee">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/26/1/nescafe-logo-png_seeklogo-265210.png" alt="Nescafé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫘</span></div>
+        <div class="card-info"><div class="card-name">Nescafé</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card safe" data-sub="coffee">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHahBz1_C5sL4Dqv1NgwyKAOcbFmjsvKs8qhHXoUsN3w&s=10" alt="قهوة عربية" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫖</span></div>
+        <div class="card-info"><div class="card-name">قهوة عربية</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 3. وجبات سريعة (data-sub="fastfood") ===== -->
+  <div class="product-grid" data-sub="fastfood">
+    <div class="card boycott" data-sub="fastfood">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ793la9C7Kct4fryKSOEjSon2EyC2g3lPqG2T6a0QRg&s=10" alt="McDonald's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍔</span></div>
+        <div class="card-info"><div class="card-name">McDonald's</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="fastfood">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdvxa3FRKa55FIt6h2TUp-n5af9BMWUG__qKqEBsjYLXZAijmw1log26s&s=10" alt="Pizza Hut" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍕</span></div>
+        <div class="card-info"><div class="card-name">Pizza Hut</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="fastfood">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://play-lh.googleusercontent.com/Zm1sAqscPpV02Rkl302ERjzrS1boDH-X6TquFyi5V2IjZb1KQ8pacA042c-4whaQ6DC_=w600-h300-pc0xffffff-pd" alt="Subway" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥪</span></div>
+        <div class="card-info"><div class="card-name">Subway</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 4. وجبات خفيفة (data-sub="snacks") ===== -->
+  <div class="product-grid" data-sub="snacks">
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyzYXGtSOXK4IuR2FMSrfNLmd9393L-yMcba3lZBXLkQ&s" alt="Nestlé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Nestlé</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXMnktY6vr6vknqXtQvImb5zn-yiqKHJoLkj5581MheF6-Tix16zwdb9I&s=10" alt="Kellogg's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Kellogg's</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card safe" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/0/1/ulker-logo-png_seeklogo-1322.png" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
+        <div class="card-info"><div class="card-name">Ülker</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 5. شكلاته (data-sub="chocolate") ===== -->
+  <div class="product-grid" data-sub="chocolate">
+    <!-- مقاطعة -->
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://bf1af2.akinoncloudcdn.com/products/2024/09/20/134297/a1fcded3-621f-4684-bf0e-3608cf486b9a_size3840_cropCenter.jpg" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Milky bar (Nestlé)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1UBYkTZZr-9oHkEA28Euuv7FiBLqZEqh-eg&s" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">KitKat (Nestlé) كيت كات</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://i5.walmartimages.com/asr/cf21ac32-fb7c-42fc-b346-5f5f95f9fa9b.dd9857ce0b53f0644a186f4254961122.jpeg" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Bakers</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://familybox.store/cdn/shop/products/hersheys-cookies-ncreme-43gr-enviar-a-venezuela-ship-to-venezuela-supermercado-online-venezuela-online-supermarket-405812.jpg?v=1762531642&width=800" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Hershey's هيرشيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://bf1af2.akinoncloudcdn.com/products/2026/01/06/91269/e615d0ed-efca-4709-be35-a02020c51d5f_size3840_cropCenter.jpg" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Ferrero Rocher</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://m.media-amazon.com/images/I/71HyZYaxgnL.jpg" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Raffaello</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://m.media-amazon.com/images/I/71Prd-+pHrL._SL1500_.jpg" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">GuyLian</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCaS08ivxivmQ1nO3TNCM2cOVehiA9b66FXw&s" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Reese's</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/61/1/galaxy-chocolate-logo-png_seeklogo-619032.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Galaxy جلاكسي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/7/1/kinder-ferrero-logo-png_seeklogo-78574.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Kinder كندر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://bf1af2.akinoncloudcdn.com/products/2026/01/09/91697/2b62254b-1b9c-46c2-bd0d-bc3fddf0efc5.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">lindt LINDOR</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://www.candy-store.cz/data/tmp/3/1/13731_3.jpg?1652428683_1" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Aero</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://bf1af2.akinoncloudcdn.com/products/2024/09/10/97598/d26baeb6-770f-427d-bdcd-36b2960ed4bf_size3840_cropCenter.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">crunchie</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://i.ebayimg.com/images/g/LzAAAOSwojRnwZHG/s-l1200.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Twix</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKzbF-T4zihQKoAs1HX_6CeahDn1eu0yL8rg&s" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">flake</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://www.sweetco.ie/image/cache/catalog/sweetco/product/cadburys/cadbury-dairy-milk-bar-110g-800x800.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Cadbury</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://thegourmetoutlet.in/cdn/shop/files/9446113-1688643240263..png?v=1700812847&width=1445" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Snickers سنيكرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://cdn.mafrservices.com/sys-master-root/hed/hba/9511640825886/356993_main.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Mars مارس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://www.britishcornershop.co.uk/img/large/CY0003.jpg" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">BOUNTY</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://alhabeebmarket.com/storage/product/47502/50798.webp" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">TOLA</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,q_auto:low,w_auto/d_ecommerce:backend-fallback.png/MAT_194126_PCE_EE" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">maltesers</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://allcitycandy.com/cdn/shop/products/m_mmilkchocolatebagfront2_2048x.jpg?v=1651519269" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">M and M's</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://docemalu.vtexassets.com/arquivos/ids/5370640/c0b84f43cc9e589843ded92a5fdeb9a3fed6780a.jpg?v=639021312267170000" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Toblerone</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- آمنة -->
+    <div class="card safe" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://images.seeklogo.com/logo-png/0/1/ulker-logo-png_seeklogo-1322.png" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Ülker (شوكولاتة)</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+
+    <div class="card safe" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ygcXcBzPQ4GnClGPi1eBncUqBLI7IuJ-2w&s=10" alt="Patchi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Patchi</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+  </div>
+</section>
