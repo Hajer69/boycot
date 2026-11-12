@@ -1,0 +1,621 @@
+<!-- ============================================================ -->
+<!-- ========== التسوق الإلكتروني (SHOPPING) ========== -->
+<!-- ============================================================ -->
+<section class="section visible" id="sec-shopping">
+  <div class="section-header">
+    <div class="section-icon">🛒</div>
+    <h2 class="section-title">التسوق</h2>
+    <span class="section-count" id="count-shopping">٠</span>
+  </div>
+
+  <!-- ===== شريط التصفية الفرعي ===== -->
+  <div class="sub-filter">
+    <button class="sub-btn active" data-section="shopping" data-sub="all" onclick="filterSubCategory('shopping', 'all', this)">🏷️ الكل</button>
+    <button class="sub-btn" data-section="shopping" data-sub="global" onclick="filterSubCategory('shopping', 'global', this)">🌍 منصات عالمية</button>
+    <button class="sub-btn" data-section="shopping" data-sub="arab" onclick="filterSubCategory('shopping', 'arab', this)">🕌 عربية وإقليمية</button>
+    <button class="sub-btn" data-section="shopping" data-sub="delivery-shipping" onclick="filterSubCategory('shopping', 'delivery-shipping', this)">🚚 توصيل وشحن</button>
+    <button class="sub-btn" data-section="shopping" data-sub="stores" onclick="filterSubCategory('shopping', 'stores', this)">🏪 محلات تجارية</button>
+    <button class="sub-btn" data-section="shopping" data-sub="transport" onclick="filterSubCategory('shopping', 'transport', this)">🚗 نقل وتأجير</button>
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 1. منصات عالمية (data-sub="global") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="global">
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/alibaba.webp" alt="Alibaba" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">Alibaba علي بابا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/aliexpress.webp" alt="AliExpress" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">AliExpress علي إكسبريس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/taobao.webp" alt="Taobao" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">Taobao تاوباو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/amazon.webp" alt="Amazon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">Amazon أمازون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/ebay.webp" alt="eBay" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">eBay إيباي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/walmart.webp" alt="Walmart" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">Walmart والمارت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/target.webp" alt="TARGET" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">TARGET تارجت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/bestbuy.webp" alt="BEST BUY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">BEST BUY بيست باي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/iherb.webp" alt="iHerb" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">iHerb آيهيرب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/etsy.webp" alt="Etsy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">Etsy إتسي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/vitacost.webp" alt="VITACOST" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">VITACOST فيتاكوست</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/watchfinder.webp" alt="WATCHFINDER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">WATCHFINDER & Co. واش فايندر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/shopify.webp" alt="shopify" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">shopify شوبيفاي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="global">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/shein.webp" alt="SHEIN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌍</span></div>
+        <div class="card-info"><div class="card-name">SHEIN شي إن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 2. منصات عربية وإقليمية (data-sub="arab") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="arab">
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/trendyol.webp" alt="trendyol" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">trendyol ترينديول</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/namshi.webp" alt="NAMSHI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">NAMSHI نمشي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/noon.webp" alt="noon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">noon نون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/desertcart.webp" alt="desertcart" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">desertcart ديزرت كارت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/patpat.webp" alt="PatPat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">PatPat بات بات</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/sezane.webp" alt="Sézane" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">Sézane سيزارن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="arab">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/jollychic.webp" alt="Jollychic" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🕌</span></div>
+        <div class="card-info"><div class="card-name">Jollychic جولي شيك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 3. توصيل وشحن (data-sub="delivery-shipping") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="delivery-shipping">
+
+    <!-- ===== شركات التوصيل ===== -->
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/delivery-hero.webp" alt="Delivery Hero" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">Delivery Hero</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/talabat.webp" alt="talabat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">talabat طلبات</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/instashop.webp" alt="InstaShop" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">InstaShop إنستاشوب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/hungryhouse.webp" alt="hungryhouse" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">hungryhouse</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/carriage.webp" alt="carriage" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">carriage كاريج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/foodpanda.webp" alt="foodpanda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">foodpanda</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/hungerstation.webp" alt="HUNGERSTATION" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">HUNGERSTATION هنقرستيشن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/yemeksepeti.webp" alt="Yemeksepeti" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">Yemeksepeti</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/doordash.webp" alt="DOORDASH" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">DOORDASH</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/deliveroo.webp" alt="deliveroo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">deliveroo</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/uber-eats.webp" alt="Uber Eats" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">Uber Eats</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/careem.webp" alt="Careem" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">Careem كريم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/keeta.webp" alt="keeta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">keeta كيتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/noon.webp" alt="noon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">noon (توصيل) نون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/breadfast.webp" alt="Breadfast" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚚</span></div>
+        <div class="card-info"><div class="card-name">Breadfast بريدفاست</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== شركات الشحن ===== -->
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/fedex.webp" alt="FedEx" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📦</span></div>
+        <div class="card-info"><div class="card-name">FedEx Express</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/tnt.webp" alt="TNT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📦</span></div>
+        <div class="card-info"><div class="card-name">TNT</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/ups.webp" alt="UPS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📦</span></div>
+        <div class="card-info"><div class="card-name">UPS</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="delivery-shipping">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/amazon.webp" alt="Amazon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📦</span></div>
+        <div class="card-info"><div class="card-name">Amazon (شحن) أمازون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 4. محلات تجارية (data-sub="stores") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="stores">
+
+    <!-- الصورة الأولى (2/6) -->
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/carrefour.webp" alt="Carrefour" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Carrefour كارفور</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/ikea.webp" alt="IKEA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">IKEA إيكيا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/sephora-store.webp" alt="SEPHORA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">SEPHORA سيفورا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/bath-body-works.webp" alt="Bath & Body Works" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Bath & Body Works باث أند بودي وركس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصورة الثانية (3/6) -->
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/marks-spencer-store.webp" alt="M&S" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">M&S (Marks & Spencer) ماركس وأسبنسر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/boots-store.webp" alt="Boots" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Boots بوتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/pottery-barn.webp" alt="POTTERY BARN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">POTTERY BARN / west elm بوتري بارن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/boconcept.webp" alt="BoConcept" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">BoConcept بو كونسيبت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصورة الثالثة (4/6) -->
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/watches-of-switzerland.webp" alt="THE WATCHES OF SWITZERLAND" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">THE WATCHES OF SWITZERLAND GROUP</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/morrisons.webp" alt="Morrisons" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Morrisons موريسونز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/tesco.webp" alt="TESCO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">TESCO تيسكو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/lidl.webp" alt="Lidl" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Lidl ليدل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصورة الرابعة (5/6) -->
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/the-face-shop.webp" alt="THE FACE SHOP" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">THE FACE SHOP ذا فيس شوب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/mothercare.webp" alt="mothercare" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">mothercare مذركير</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/on-the-run.webp" alt="On the Run" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">On the Run أون ذا ران</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/costco.webp" alt="COSTCO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">COSTCO WHOLESALE كوستكو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصورة الخامسة (6/6) -->
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/sainsburys.webp" alt="Sainsbury's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">Sainsbury's سينسبوريز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- SAFEWAY -->
+<div class="card boycott" data-sub="stores">
+  <div class="card-top">
+    <div class="card-logo"><img src="images/shopping/safeway.webp" alt="SAFEWAY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+    <div class="card-info"><div class="card-name">SAFEWAY سيفوي</div></div>
+    <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+  </div>
+</div>
+
+<!-- United supermarkets -->
+<div class="card boycott" data-sub="stores">
+  <div class="card-top">
+    <div class="card-logo"><img src="images/shopping/united-supermarkets.webp" alt="United supermarkets" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+    <div class="card-info"><div class="card-name">United supermarkets يونايتد سوبرماركتس</div></div>
+    <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+  </div>
+</div>
+
+    <div class="card boycott" data-sub="stores">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/primark-store.webp" alt="PRIMARK" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏪</span></div>
+        <div class="card-info"><div class="card-name">PRIMARK برايمارك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- ========================================================== -->
+  <!-- ===== 5. خدمات نقل وتأجير (data-sub="transport") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="transport">
+
+    <!-- الصف الأول (31%) -->
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/lyft.webp" alt="lyft" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">lyft</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/freenow.webp" alt="freenow" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">freenow (by lyft)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصف الثاني (28%) -->
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/uber.webp" alt="Uber" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">Uber</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/careem.webp" alt="Careem" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">Careem كريم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/weride.webp" alt="WeRide" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">WeRide</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصف الثالث (13%) -->
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/avis.webp" alt="AVIS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">AVIS</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/budget-rental.webp" alt="Budget" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">Budget</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/payless-rental.webp" alt="Payless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">Payless CAR RENTAL</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- الصف الرابع (مملوكة) -->
+    <div class="card boycott" data-sub="transport">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/shopping/gett.webp" alt="Gett" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🚗</span></div>
+        <div class="card-info"><div class="card-name">Gett</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+</section>

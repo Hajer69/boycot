@@ -1,3 +1,6 @@
+<!-- ============================================================ -->
+<!-- ========== التقنية (TECH) ========== -->
+<!-- ============================================================ -->
 <section class="section visible" id="sec-tech">
   <div class="section-header">
     <div class="section-icon">💻</div>
@@ -5,44 +8,707 @@
     <span class="section-count" id="count-tech">٠</span>
   </div>
 
-  <div class="subsection">
-    <h3 class="subsection-title">☁️ الخدمات السحابية والبرمجيات</h3>
-    <div class="product-grid">
-      <div class="card boycott">
-        <div class="card-top">
-          <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcT7fFERGjpbAQGyUCKIB53X6R4uei1h9c1GuQ%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Google" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☁️</span></div>
-          <div class="card-info"><div class="card-name">Google</div></div>
-          <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-        </div>
-      </div>
-      <div class="card boycott">
-        <div class="card-top">
-          <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffennec-fox.net%2Fwp-content%2Fuploads%2F2019%2F03%2FAmazon-Card-Logo-.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Amazon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📦</span></div>
-          <div class="card-info"><div class="card-name">Amazon</div></div>
-          <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-        </div>
-      </div>
-      <div class="card boycott">
-        <div class="card-top">
-          <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fhba.org.vn%2Fwp-content%2Fuploads%2F2022%2F04%2Fintel.webp&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Intel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
-          <div class="card-info"><div class="card-name">Intel</div></div>
-          <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-        </div>
-      </div>
-      <div class="card boycott">
-        <div class="card-top">
-          <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fhipfonts.com%2Fwp-content%2Fuploads%2F2023%2F06%2FMicrosoft-Logo-square-min.jpeg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Microsoft" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💼</span></div>
-          <div class="card-info"><div class="card-name">Microsoft</div></div>
-          <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-        </div>
-      </div>
-      <div class="card safe">
-        <div class="card-top">
-          <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcR9bYemkXoUYa983TE9wB27nJh3ZH2Z0ft7XA%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Proton" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔒</span></div>
-          <div class="card-info"><div class="card-name">Proton</div></div>
-          <span class="card-badge badge-safe">✅ آمن</span>
-        </div>
+  <!-- ===== شريط التصفية الفرعي ===== -->
+  <div class="sub-filter">
+    <button class="sub-btn active" data-section="tech" data-sub="all" onclick="filterSubCategory('tech', 'all', this)">🏷️ الكل</button>
+    <button class="sub-btn" data-section="tech" data-sub="phones" onclick="filterSubCategory('tech', 'phones', this)">📱 هواتف وأجهزة لوحية</button>
+    <button class="sub-btn" data-section="tech" data-sub="computers" onclick="filterSubCategory('tech', 'computers', this)">💻 حواسيب ومكونات</button>
+    <button class="sub-btn" data-section="tech" data-sub="cameras" onclick="filterSubCategory('tech', 'cameras', this)">📷 كاميرات ومعداتها</button>
+    <button class="sub-btn" data-section="tech" data-sub="electronics" onclick="filterSubCategory('tech', 'electronics', this)">🖨️ طابعات وإلكترونيات</button>
+    <button class="sub-btn" data-section="tech" data-sub="accessories" onclick="filterSubCategory('tech', 'accessories', this)">🎧 ملحقات وصوتيات</button>
+    <button class="sub-btn" data-section="tech" data-sub="medical" onclick="filterSubCategory('tech', 'medical', this)">🔬 أجهزة طبية وعلمية</button>
+    <button class="sub-btn" data-section="tech" data-sub="cloud" onclick="filterSubCategory('tech', 'cloud', this)">☁️ خدمات سحابية وبرمجيات</button>
+    <button class="sub-btn" data-section="tech" data-sub="games" onclick="filterSubCategory('tech', 'games', this)">🎮 ألعاب فيديو</button>
+  </div>
+
+  <!-- ===== 1. هواتف وأجهزة لوحية (data-sub="phones") ===== -->
+  <div class="product-grid" data-sub="phones">
+    <!-- Apple -->
+    <div class="card boycott" data-sub="phones">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/apple.webp" alt="Apple" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
+        <div class="card-info"><div class="card-name">Apple أبل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
+
+    <!-- Google (Pixel) -->
+    <div class="card boycott" data-sub="phones">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/google.webp" alt="Google" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
+        <div class="card-info"><div class="card-name">Google (Pixel) جوجل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Huawei -->
+    <div class="card boycott" data-sub="phones">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/huawei.webp" alt="Huawei" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
+        <div class="card-info"><div class="card-name">Huawei هواوي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Motorola -->
+    <div class="card boycott" data-sub="phones">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/motorola.webp" alt="Motorola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
+        <div class="card-info"><div class="card-name">Motorola موتورولا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Samsung (هواتف) -->
+    <div class="card boycott" data-sub="phones">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/samsung.webp" alt="Samsung" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📱</span></div>
+        <div class="card-info"><div class="card-name">Samsung سامسونج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 2. حواسيب ومكونات (data-sub="computers") ===== -->
+  <div class="product-grid" data-sub="computers">
+    <!-- Dell -->
+    <div class="card boycott" data-sub="computers">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/dell.webp" alt="Dell" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💻</span></div>
+        <div class="card-info"><div class="card-name">Dell ديل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- HP -->
+    <div class="card boycott" data-sub="computers">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/hp.webp" alt="HP" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💻</span></div>
+        <div class="card-info"><div class="card-name">HP إتش بي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Intel -->
+    <div class="card boycott" data-sub="computers">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/intel.webp" alt="Intel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💻</span></div>
+        <div class="card-info"><div class="card-name">Intel إنتل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Lenovo -->
+    <div class="card boycott" data-sub="computers">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/lenovo.webp" alt="Lenovo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💻</span></div>
+        <div class="card-info"><div class="card-name">Lenovo لينوفو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Microsoft -->
+    <div class="card boycott" data-sub="computers">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/microsoft.webp" alt="Microsoft" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💻</span></div>
+        <div class="card-info"><div class="card-name">Microsoft مايكروسوفت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== 3. كاميرات ومعداتها (data-sub="cameras") ===== -->
+<div class="product-grid" data-sub="cameras">
+  
+  <!-- Canon -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/canon.webp" alt="Canon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Canon كانون</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Olympus -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/olympus.webp" alt="Olympus" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Olympus أوليمبوس</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Leica -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/leica.webp" alt="Leica" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Leica لايكا</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- GoPro -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/gopro.webp" alt="GoPro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">GoPro جوبرو</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Kodak -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/kodak.webp" alt="Kodak" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Kodak كوداك</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Garmin -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/garmin.webp" alt="Garmin" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Garmin غارمن</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Siemens -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/siemens.webp" alt="Siemens" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Siemens سيمنز</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Honeywell -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/honeywell.webp" alt="Honeywell" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Honeywell هانويل</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Lenovo -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/lenovo.webp" alt="Lenovo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">📷</span></div>
+      <div class="card-info"><div class="card-name">Lenovo لينوفو</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- SanDisk -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/sandisk.webp" alt="SanDisk" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+      <div class="card-info"><div class="card-name">SanDisk سان ديسك</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Seagate -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/seagate.webp" alt="Seagate" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+      <div class="card-info"><div class="card-name">Seagate سيجيت</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+
+  <!-- Western Digital -->
+  <div class="card boycott" data-sub="cameras">
+    <div class="card-top">
+      <div class="card-logo"><img src="images/tech/western-digital.webp" alt="Western Digital" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+      <div class="card-info"><div class="card-name">Western Digital ويسترن ديجيتال</div></div>
+      <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+    </div>
+  </div>
+</div>
+  <!-- ===== 4. طابعات وإلكترونيات (data-sub="electronics") ===== -->
+  <div class="product-grid" data-sub="electronics">
+    
+    <!-- Canon (طابعات) -->
+    <div class="card boycott" data-sub="electronics">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/canon.webp" alt="Canon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🖨️</span></div>
+        <div class="card-info"><div class="card-name">Canon (طابعات) كانون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Honeywell -->
+    <div class="card boycott" data-sub="electronics">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/honeywell.webp" alt="Honeywell" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🖨️</span></div>
+        <div class="card-info"><div class="card-name">Honeywell هانويل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Philips -->
+    <div class="card boycott" data-sub="electronics">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/philips.webp" alt="Philips" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🖨️</span></div>
+        <div class="card-info"><div class="card-name">Philips فيليبس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Siemens -->
+    <div class="card boycott" data-sub="electronics">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/siemens.webp" alt="Siemens" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🖨️</span></div>
+        <div class="card-info"><div class="card-name">Siemens سيمنز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 5. ملحقات وصوتيات (data-sub="accessories") ===== -->
+  <div class="product-grid" data-sub="accessories">
+    
+    <!-- Garmin (ملحقات) -->
+    <div class="card boycott" data-sub="accessories">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/garmin.webp" alt="Garmin" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎧</span></div>
+        <div class="card-info"><div class="card-name">Garmin غارمن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- JBL -->
+    <div class="card boycott" data-sub="accessories">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/jbl.webp" alt="JBL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎧</span></div>
+        <div class="card-info"><div class="card-name">JBL جي بي إل (Samsung)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- SanDisk -->
+    <div class="card boycott" data-sub="accessories">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/sandisk.webp" alt="SanDisk" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+        <div class="card-info"><div class="card-name">SanDisk سان ديسك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Seagate -->
+    <div class="card boycott" data-sub="accessories">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/seagate.webp" alt="Seagate" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+        <div class="card-info"><div class="card-name">Seagate سيجيت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Western Digital -->
+    <div class="card boycott" data-sub="accessories">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/western-digital.webp" alt="Western Digital" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💾</span></div>
+        <div class="card-info"><div class="card-name">Western Digital ويسترن ديجيتال</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 6. أجهزة طبية وعلمية (data-sub="medical") ===== -->
+  <div class="product-grid" data-sub="medical">
+    
+    <!-- Align -->
+    <div class="card boycott" data-sub="medical">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/align.webp" alt="Align" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔬</span></div>
+        <div class="card-info"><div class="card-name">Align ألاين</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Fanuc -->
+    <div class="card boycott" data-sub="medical">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/fanuc.webp" alt="Fanuc" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔬</span></div>
+        <div class="card-info"><div class="card-name">Fanuc فانوك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Lumenis -->
+    <div class="card boycott" data-sub="medical">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/lumenis.webp" alt="Lumenis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔬</span></div>
+        <div class="card-info"><div class="card-name">Lumenis لومينيس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Olympus (أجهزة طبية) -->
+    <div class="card boycott" data-sub="medical">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/olympus.webp" alt="Olympus" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔬</span></div>
+        <div class="card-info"><div class="card-name">Olympus (أجهزة طبية) أوليمبوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Siemens (أجهزة طبية) -->
+    <div class="card boycott" data-sub="medical">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/siemens.webp" alt="Siemens" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🔬</span></div>
+        <div class="card-info"><div class="card-name">Siemens (أجهزة طبية) سيمنز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 7. خدمات سحابية وبرمجيات (data-sub="cloud") ===== -->
+  <div class="product-grid" data-sub="cloud">
+    
+    <!-- Amazon -->
+    <div class="card boycott" data-sub="cloud">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/amazon.webp" alt="Amazon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☁️</span></div>
+        <div class="card-info"><div class="card-name">Amazon (AWS) أمازون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Google (خدمات) -->
+    <div class="card boycott" data-sub="cloud">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/google-cloud.webp" alt="Google Cloud" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☁️</span></div>
+        <div class="card-info"><div class="card-name">Google Cloud جوجل كلاود</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Microsoft (خدمات) -->
+    <div class="card boycott" data-sub="cloud">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/microsoft-azure.webp" alt="Microsoft Azure" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☁️</span></div>
+        <div class="card-info"><div class="card-name">Microsoft Azure مايكروسوفت أزور</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Proton (آمن) -->
+    <div class="card safe" data-sub="cloud">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/proton.webp" alt="Proton" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☁️</span></div>
+        <div class="card-info"><div class="card-name">Proton بروتون</div></div>
+        <span class="card-badge badge-safe">✅ آمن</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== 8. ألعاب فيديو (data-sub="games") ===== -->
+  <div class="product-grid" data-sub="games">
+
+    <!-- Criminal Minds: The Mobile Game -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/criminal-minds.webp" alt="Criminal Minds" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Criminal Minds: The Mobile Game</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Domino Go -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/domino-go.webp" alt="Domino Go" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Domino Go</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Matchbox -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/matchbox.webp" alt="Matchbox" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Matchbox</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Mech Arena -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/mech-arena.webp" alt="Mech Arena" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Mech Arena</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Narcos: Cartel Wars -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/narcos-cartel-wars.webp" alt="Narcos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Narcos: Cartel Wars</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Nokobot -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/nokobot.webp" alt="Nokobot" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Nokobot</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Opa! -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/opa.webp" alt="Opa!" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Opa!</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Raid: Shadow Legends -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/raid-shadow-legends.webp" alt="Raid Shadow Legends" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Raid: Shadow Legends</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Rummy Rush -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/rummy-rush.webp" alt="Rummy Rush" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Rummy Rush</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Star Trek Legends -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/star-trek-legends.webp" alt="Star Trek Legends" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Star Trek Legends</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- The Walking Dead Slots -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/walking-dead-slots.webp" alt="Walking Dead Slots" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">The Walking Dead Slots</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Tilez -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/tilez.webp" alt="Tilez" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Tilez</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Vikings: War of Clans -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/vikings-war-of-clans.webp" alt="Vikings" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Vikings: War of Clans</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Warriors: Rise to Glory -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/warriors-rise-to-glory.webp" alt="Warriors" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Warriors: Rise to Glory</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- World Series of Poker -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/world-series-of-poker.webp" alt="World Series of Poker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">World Series of Poker</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Supersonic -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/supersonic.webp" alt="Supersonic" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Supersonic</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Playtika -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/playtika.webp" alt="Playtika" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Playtika</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Gavra Games -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/gavra-games.webp" alt="Gavra Games" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Gavra Games</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Anzu -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/anzu.webp" alt="Anzu" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Anzu</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Plarium -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/plarium.webp" alt="Plarium" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Plarium</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- TabTale -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/tabtale.webp" alt="TabTale" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">TabTale</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- SciPlay -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/sciplay.webp" alt="SciPlay" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">SciPlay</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- FTX Games -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/ftx-games.webp" alt="FTX Games" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">FTX Games</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Overwolf -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/overwolf.webp" alt="Overwolf" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Overwolf</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Capricia Productions -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/capricia-productions.webp" alt="Capricia Productions" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Capricia Productions</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Beach Bum -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/beach-bum.webp" alt="Beach Bum" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Beach Bum</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- CrazyLabs -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/crazylabs.webp" alt="CrazyLabs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">CrazyLabs</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- Obscure Games -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/obscure-games.webp" alt="Obscure Games" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Obscure Games</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ألعاب EA -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/apex-legends.webp" alt="Apex Legends" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Apex Legends (EA)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ألعاب Microsoft -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/call-of-duty.webp" alt="Call of Duty" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Call of Duty (Microsoft)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ألعاب Tencent -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/pubg-mobile.webp" alt="PUBG Mobile" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">PUBG Mobile (Tencent)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ألعاب Warner Bros. -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/mortal-kombat.webp" alt="Mortal Kombat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Mortal Kombat (Warner Bros.)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ألعاب Take-Two -->
+    <div class="card boycott" data-sub="games">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/tech/games/gta.webp" alt="GTA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎮</span></div>
+        <div class="card-info"><div class="card-name">Grand Theft Auto (GTA) - Take-Two</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
   </div>
 </section>

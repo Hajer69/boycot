@@ -1,38 +1,372 @@
+<!-- ============================================================ -->
+<!-- ========== الموضة والملابس (CLOTHING) ========== -->
+<!-- ============================================================ -->
 <section class="section visible" id="sec-clothing">
   <div class="section-header">
     <div class="section-icon">👕</div>
-    <h2 class="section-title">الملابس والأحذية</h2>
+    <h2 class="section-title">الموضة والملابس</h2>
     <span class="section-count" id="count-clothing">٠</span>
   </div>
 
-  <div class="product-grid">
-    <div class="card boycott">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F022%2F076%2F746%2Fnon_2x%2Fpuma-logo-and-art-free-vector.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Puma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div>
-        <div class="card-info"><div class="card-name">Puma</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-    <div class="card boycott">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F35%2F1%2Fzara-logo-png_seeklogo-351594.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Zara" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div>
-        <div class="card-info"><div class="card-name">Zara</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-    <div class="card boycott">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.for9a.com%2Fthumb%2Ffit-600-319-100-jpeg%2Fblog%2F2668-%25D9%2582%25D8%25B5%25D8%25A9-%25D9%2586%25D8%25AC%25D8%25A7%25D8%25AD-%25D8%25B4%25D8%25B1%25D9%2583%25D8%25A9-nike-03.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Nike" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🎽</span></div>
-        <div class="card-info"><div class="card-name">Nike</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-    <div class="card safe">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRH8s3jCAGy6wxa2EAS3Tg-AIRAgBEdFOkpUw%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="New Balance" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div>
-        <div class="card-info"><div class="card-name">New Balance</div></div>
-        <span class="card-badge badge-safe">✅ آمن</span>
-      </div>
-    </div>
+  <!-- ========================================================== -->
+  <!-- ===== شريط التصفية الفرعي (SUB-FILTER) ===== -->
+  <!-- ========================================================== -->
+  <div class="sub-filter">
+    <button class="sub-btn active" data-section="clothing" data-sub="all" onclick="filterSubCategory('clothing', 'all', this)">🏷️ الكل</button>
+    <button class="sub-btn" data-section="clothing" data-sub="menswear" onclick="filterSubCategory('clothing', 'menswear', this)">👔 رجالي</button>
+    <button class="sub-btn" data-section="clothing" data-sub="womenswear" onclick="filterSubCategory('clothing', 'womenswear', this)">👗 نسائي</button>
+    <button class="sub-btn" data-section="clothing" data-sub="shoes" onclick="filterSubCategory('clothing', 'shoes', this)">👟 أحذية</button>
+    <button class="sub-btn" data-section="clothing" data-sub="accessories" onclick="filterSubCategory('clothing', 'accessories', this)">👜 إكسسوارات</button>
+    <button class="sub-btn" data-section="clothing" data-sub="sportswear" onclick="filterSubCategory('clothing', 'sportswear', this)">🏃 ملابس رياضية</button>
+    <button class="sub-btn" data-section="clothing" data-sub="luxury" onclick="filterSubCategory('clothing', 'luxury', this)">💎 ماركات فاخرة</button>
+    <button class="sub-btn" data-section="clothing" data-sub="children" onclick="filterSubCategory('clothing', 'children', this)">👶 أطفال</button>
   </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 1. ملابس رجالية (data-sub="menswear") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="menswear">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/guess.webp" alt="GUESS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">GUESS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/next.webp" alt="NEXT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">NEXT</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/hm.webp" alt="H&M" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">H&M</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/burberry.webp" alt="BURBERRY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">BURBERRY</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/marks-spencer.webp" alt="M&S" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">M&S (Marks & Spencer)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/zara.webp" alt="ZARA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">ZARA (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/bershka.webp" alt="Bershka" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Bershka (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/pull-bear.webp" alt="PULL&BEAR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">PULL&BEAR (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/massimo-dutti.webp" alt="Massimo Dutti" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Massimo Dutti (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/cos.webp" alt="COS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">COS (H&M Group)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/primark.webp" alt="PRIMARK" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">PRIMARK</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/river-island.webp" alt="River Island" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">River Island</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/lee-cooper.webp" alt="Lee Cooper" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Lee Cooper</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/ecko.webp" alt="eckō unltd." loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">eckō unltd.</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/gap.webp" alt="GAP" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">GAP</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/banana-republic.webp" alt="BANANA REPUBLIC" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">BANANA REPUBLIC (GAP)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/boss.webp" alt="BOSS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">BOSS (HUGO BOSS)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/tommy-hilfiger.webp" alt="TOMMY HILFIGER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">TOMMY HILFIGER</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/calvin-klein.webp" alt="Calvin Klein" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Calvin Klein</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/ralph-lauren.webp" alt="RALPH LAUREN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">RALPH LAUREN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/american-eagle.webp" alt="AMERICAN EAGLE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">AMERICAN EAGLE OUTFITTERS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/ted-baker.webp" alt="TED BAKER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">TED BAKER LONDON</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/levis.webp" alt="Levi's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Levi's</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/peter-millar.webp" alt="PETER MILLAR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">PETER MILLAR</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/dunhill.webp" alt="dunhill" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">dunhill</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/old-navy.webp" alt="OLD NAVY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">OLD NAVY (GAP)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/urban-outfitters.webp" alt="URBAN OUTFITTERS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">URBAN OUTFITTERS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/abercrombie.webp" alt="Abercrombie" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">Abercrombie & Fitch</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/hollister.webp" alt="HOLLISTER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">HOLLISTER</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="menswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/esmara.webp" alt="esmara" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👔</span></div><div class="card-info"><div class="card-name">esmara (Lidl)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 2. ملابس نسائية (data-sub="womenswear") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="womenswear">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/guess.webp" alt="GUESS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">GUESS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/hm.webp" alt="H&M" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">H&M</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/chanel.webp" alt="CHANEL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">CHANEL</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/st-john.webp" alt="ST. JOHN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">ST. JOHN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/skims.webp" alt="SKIMS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">SKIMS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/zara.webp" alt="ZARA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">ZARA (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/stradivarius.webp" alt="STRADIVARIUS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">STRADIVARIUS (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/oysho.webp" alt="OYSHO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">OYSHO (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/lefties.webp" alt="lefties" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">lefties (Inditex)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/victoria-secret.webp" alt="VICTORIA'S SECRET" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">VICTORIA'S SECRET</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/shein.webp" alt="SHEIN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">SHEIN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/elle.webp" alt="ELLE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">ELLE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/claires.webp" alt="claire's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">claire's</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/lipsy-london.webp" alt="LIPSY LONDON" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">LIPSY LONDON</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/joules.webp" alt="Joules" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">Joules</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/fatface.webp" alt="FATFACE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">FATFACE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/anna-field.webp" alt="ANNA FIELD" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">ANNA FIELD</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/gilly-hicks.webp" alt="gilly hicks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">gilly hicks (HOLLISTER)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/sweaty-betty.webp" alt="Sweaty Betty" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">Sweaty Betty</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="womenswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/tom-ford.webp" alt="TOM FORD" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👗</span></div><div class="card-info"><div class="card-name">TOM FORD</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 3. أحذية (data-sub="shoes") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="shoes">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/reebok.webp" alt="Reebok" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Reebok</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/asics.webp" alt="asics" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">asics</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/cole-haan.webp" alt="COLE HAAN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">COLE HAAN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/bally.webp" alt="BALLY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">BALLY</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/aldo.webp" alt="ALDO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">ALDO</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/puma.webp" alt="PUMA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">PUMA</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/onitsuka-tiger.webp" alt="Onitsuka Tiger" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Onitsuka Tiger</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/umbro.webp" alt="umbro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">umbro</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/havaianas.webp" alt="havaianas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">havaianas</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/jd.webp" alt="JD" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">JD</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/call-it-spring.webp" alt="CALL IT SPRING" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">CALL IT SPRING</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/caterpillar.webp" alt="CATERPILLAR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">CATERPILLAR</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/merrell.webp" alt="MERRELL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">MERRELL</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/saucony.webp" alt="saucony" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">saucony</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/skechers.webp" alt="SKECHERS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">SKECHERS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/steve-madden.webp" alt="STEVE MADDEN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">STEVE MADDEN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/timberland.webp" alt="Timberland" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Timberland</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/birkenstock.webp" alt="BIRKENSTOCK" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">BIRKENSTOCK</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/brooks.webp" alt="BROOKS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">BROOKS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/converse.webp" alt="CONVERSE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">CONVERSE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/allbirds.webp" alt="allbirds" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">allbirds</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/toms.webp" alt="TOMS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">TOMS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/crocs.webp" alt="crocs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">crocs</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/heydu.de.webp" alt="HEYDUDE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">HEYDUDE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/naturalizer.webp" alt="naturalizer" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">naturalizer</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/sam-edelman.webp" alt="Sam Edelman" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Sam Edelman</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/stuart-weitzman.webp" alt="STUART WEITZMAN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">STUART WEITZMAN</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/jimmy-choo.webp" alt="JIMMY CHOO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">JIMMY CHOO</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/hush-puppies.webp" alt="Hush Puppies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Hush Puppies</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/chaco.webp" alt="Chaco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">Chaco</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="shoes"><div class="card-top"><div class="card-logo"><img src="images/clothing/stride-rite.webp" alt="stride rite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👟</span></div><div class="card-info"><div class="card-name">stride rite</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 4. إكسسوارات (data-sub="accessories") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="accessories">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/gucci.webp" alt="GUCCI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">GUCCI (Kering Group)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/louis-vuitton.webp" alt="LOUIS VUITTON" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">LOUIS VUITTON</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/versace.webp" alt="VERSACE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">VERSACE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/prada.webp" alt="PRADA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">PRADA</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/fendi.webp" alt="FENDI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">FENDI (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/tiffany.webp" alt="TIFFANY & CO." loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">TIFFANY & CO. (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/bvlgari.webp" alt="BVLGARI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">BVLGARI (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/pandora.webp" alt="PANDORA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">PANDORA</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/swarovski.webp" alt="SWAROVSKI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">SWAROVSKI</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/coach.webp" alt="COACH" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">COACH</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/michael-kors.webp" alt="MICHAEL KORS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">MICHAEL KORS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/kate-spade.webp" alt="kate spade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">kate spade NEW YORK</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/kipling.webp" alt="kipling" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">kipling</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/jansport.webp" alt="JANSPORT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">JANSPORT</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/montblanc.webp" alt="MONTBLANC" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">MONTBLANC</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/delvaux.webp" alt="DELVAUX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">DELVAUX</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/vhernier.webp" alt="VHERNIER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">VHERNIER</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/frederic-malle.webp" alt="Editions de Parfums" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">EDITIONS DE PARFUMS FREDERIC MALLE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="accessories"><div class="card-top"><div class="card-logo"><img src="images/clothing/kilian.webp" alt="Kilian" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👜</span></div><div class="card-info"><div class="card-name">Kilian PERFUME AS AN ART</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 5. ملابس رياضية (data-sub="sportswear") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="sportswear">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/nike.webp" alt="NIKE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">NIKE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/adidas.webp" alt="adidas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">adidas</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/under-armour.webp" alt="UNDER ARMOUR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">UNDER ARMOUR</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/lululemon.webp" alt="lululemon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">lululemon</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/gymshark.webp" alt="GYMSHARK" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">GYMSHARK</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/nobull.webp" alt="NOBULL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">NOBULL</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/lacoste.webp" alt="LACOSTE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">LACOSTE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/hoka.webp" alt="HOKA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">HOKA ONE ONE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/vans.webp" alt="VANS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">VANS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/the-north-face.webp" alt="THE NORTH FACE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">THE NORTH FACE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/columbia.webp" alt="Columbia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">Columbia</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/on-running.webp" alt="On" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">On (Running)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/livergy.webp" alt="LIVERGY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">LIVERGY</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/crivit-sports.webp" alt="crivit SPORTS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">crivit SPORTS (Lidl)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/511-tactical.webp" alt="5.11" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">5.11 (Tactical)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/figs.webp" alt="FIGS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">FIGS</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/supreme.webp" alt="Supreme" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">Supreme</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="sportswear"><div class="card-top"><div class="card-logo"><img src="images/clothing/harley-davidson.webp" alt="HARLEY-DAVIDSON" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🏃</span></div><div class="card-info"><div class="card-name">HARLEY-DAVIDSON</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 6. ماركات فاخرة (data-sub="luxury") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="luxury">
+
+    <!-- العلامات الأساسية -->
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/gucci.webp" alt="GUCCI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">GUCCI (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/balenciaga.webp" alt="BALENCIAGA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">BALENCIAGA (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/saint-laurent.webp" alt="SAINT LAURENT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">SAINT LAURENT (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/bottega-veneta.webp" alt="BOTTEGA VENETA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">BOTTEGA VENETA (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/alexander-mcqueen.webp" alt="MCQUEEN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">MCQUEEN (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/brioni.webp" alt="Brioni" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">Brioni (Kering)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/dior.webp" alt="DIOR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">DIOR (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/givenchy.webp" alt="GIVENCHY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">GIVENCHY (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/kenzo.webp" alt="KENZO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">KENZO PARIS (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/loewe.webp" alt="LOEWE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">LOEWE (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/celine.webp" alt="CELINE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">CELINE (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/marc-jacobs.webp" alt="MARC JACOBS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">MARC JACOBS (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/fenty-beauty.webp" alt="FENTY BEAUTY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">FENTY BEAUTY BY RIHANNA (LVMH)</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/armani.webp" alt="GIORGIO ARMANI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">GIORGIO ARMANI</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/valentino.webp" alt="VALENTINO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">VALENTINO</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/chloe.webp" alt="Chloé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">Chloé</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <!-- العلامات الجديدة المضافة -->
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/jimmy-choo.webp" alt="JIMMY CHOO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">JIMMY CHOO</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/tom-ford.webp" alt="TOM FORD" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">TOM FORD</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/montblanc.webp" alt="MONTBLANC" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">MONTBLANC</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/delvaux.webp" alt="DELVAUX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">DELVAUX</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="luxury"><div class="card-top"><div class="card-logo"><img src="images/clothing/vhernier.webp" alt="VHERNIER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💎</span></div><div class="card-info"><div class="card-name">VHERNIER</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 7. أطفال (data-sub="children") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="children">
+
+    <div class="card boycott" data-sub="children"><div class="card-top"><div class="card-logo"><img src="images/clothing/carters.webp" alt="carter's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👶</span></div><div class="card-info"><div class="card-name">carter's</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="children"><div class="card-top"><div class="card-logo"><img src="images/clothing/the-childrens-place.webp" alt="THE CHILDREN'S PLACE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👶</span></div><div class="card-info"><div class="card-name">THE CHILDREN'S PLACE</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="children"><div class="card-top"><div class="card-logo"><img src="images/clothing/cath-kidston.webp" alt="Cath Kidston" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👶</span></div><div class="card-info"><div class="card-name">Cath Kidston</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+    <div class="card boycott" data-sub="children"><div class="card-top"><div class="card-logo"><img src="images/clothing/seraphine.webp" alt="Seraphine" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">👶</span></div><div class="card-info"><div class="card-name">Seraphine</div></div><span class="card-badge badge-boycott">🚫 مُقاطَع</span></div></div>
+
+  </div>
+
 </section>

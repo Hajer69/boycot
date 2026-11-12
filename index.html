@@ -6,10 +6,6 @@
   <title>قاطع وستبدل | دليل المقاطعة</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet" />
-  <style>
-    .loader { text-align: center; padding: 40px; color: var(--text-muted); }
-    .loader span { font-size: 2rem; display: block; }
-  </style>
 </head>
 <body>
 
@@ -40,6 +36,10 @@
   <button class="nav-btn" data-section="clothing" onclick="loadCategory('clothing', this)"><span class="nav-icon">👕</span> ملابس</button>
   <button class="nav-btn" data-section="restaurants" onclick="loadCategory('restaurants', this)"><span class="nav-icon">☕</span> مطاعم</button>
   <button class="nav-btn" data-section="sports" onclick="loadCategory('sports', this)"><span class="nav-icon">🏃</span> الرياضة</button>
+  <button class="nav-btn" data-section="vehicles" onclick="loadCategory('vehicles', this)"><span class="nav-icon">🚗</span> مركبات</button>
+  <button class="nav-btn" data-section="appliances" onclick="loadCategory('appliances', this)"><span class="nav-icon">🔌</span> أجهزة</button>
+  <button class="nav-btn" data-section="shopping" onclick="loadCategory('shopping', this)"><span class="nav-icon">🛒</span> تسوق
+</button>
 </nav>
 
 <!-- ===== HERO ===== -->
@@ -72,13 +72,12 @@
     <span class="legend-item"><span class="dot-swatch" style="background:var(--green)"></span> آمن</span>
   </div>
 
-  <div id="allPagination" class="all-pagination" style="display:none"></div>
-
   <div id="content-area">
     <div class="loader"><span>⏳</span> جاري التحميل...</div>
   </div>
 
-  <div id="allPaginationBottom" class="all-pagination" style="display:none"></div>
+  <div id="searchResultsInfo" class="search-results-info" style="display:none"></div>
+  <div id="searchResultsGrid" class="product-grid" style="display:none"></div>
 
   <div class="empty" id="emptyState" style="display:none">
     <div class="empty-icon">🔍</div>
@@ -101,40 +100,67 @@
 <script>
   let currentType = 'all';
   let isListView = false;
+  let globalStats = null;
+  let currentMode = 'all';
 
-  // قائمة الأقسام بترتيبها (تُستخدم في وضع "الكل" للتنقل بين الصفحات الفرعية)
+  // قائمة الأقسام (تم إضافة shopping)
   const CATEGORIES = [
-    { id: 'food',        label: 'الأغذية والمشروبات', icon: '🍽️' },
-    { id: 'personal',    label: 'العناية الشخصية',     icon: '🧴' },
-    { id: 'cleaning',    label: 'منتجات التنظيف',      icon: '🧹' },
-    { id: 'tech',        label: 'التقنية',              icon: '💻' },
-    { id: 'clothing',    label: 'الملابس والأحذية',     icon: '👕' },
-    { id: 'restaurants', label: 'المطاعم والمقاهي',     icon: '☕' },
-    { id: 'sports',      label: 'الرياضة',              icon: '🏃' },
+    { id: 'food',        label: 'الأغذية والمشروبات', shortLabel: 'أكل',      icon: '🍽️' },
+    { id: 'personal',    label: 'العناية الشخصية',     shortLabel: 'عناية',   icon: '🧴' },
+    { id: 'cleaning',    label: 'منتجات التنظيف',      shortLabel: 'تنظيف',   icon: '🧹' },
+    { id: 'tech',        label: 'التقنية',              shortLabel: 'التقنية', icon: '💻' },
+    { id: 'clothing',    label: 'الموضة والملابس',      shortLabel: 'ملابس',   icon: '👕' },
+    { id: 'restaurants', label: 'المطاعم والمقاهي',     shortLabel: 'مطاعم',   icon: '☕' },
+    { id: 'sports',      label: 'الرياضة',              shortLabel: 'الرياضة', icon: '🏃' },
+    { id: 'vehicles',    label: 'السيارات والدراجات النارية', shortLabel: 'مركبات', icon: '🚗' },
+    { id: 'appliances',  label: 'الأجهزة المنزلية',     shortLabel: 'أجهزة',   icon: '🔌' },
+    { id: 'shopping',    label: 'التسوق الإلكتروني',    shortLabel: 'تسوق',   icon: '🛒' },  // ← جديد
   ];
 
-  let allPageIndex = 0;          // الصفحة الحالية داخل وضع "الكل"
-  let globalStats = null;        // إجمالي عدد المنتجات (مُقاطَع/آمن) على مستوى الموقع كامل
-  let currentMode = 'all';       // 'all' (متعدد الصفحات) أو 'single' (قسم واحد من شريط التنقل)
+  // ===== تحميل جميع الأقسام في صفحة واحدة (وضع "الكل") =====
+  function loadAllPage() {
+    const area = document.getElementById('content-area');
+    document.getElementById('emptyState').style.display = 'none';
+    document.getElementById('searchInput').value = '';
+    area.innerHTML = '<div class="loader"><span>⏳</span> جاري تحميل جميع المنتجات...</div>';
 
-  // ===== تحميل المحتوى =====
-  function loadCategory(categoryId, btn) {
-    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
+    const categories = CATEGORIES.map(c => c.id);
+    let loaded = 0;
+    let allHtml = '';
 
-    if (categoryId === 'all') {
-      currentMode = 'all';
-      allPageIndex = 0;
-      loadAllPage(0);
-      ensureGlobalStats();
-    } else {
-      currentMode = 'single';
-      hidePagination();
-      loadSingleCategory(categoryId);
-    }
+    categories.forEach((cat) => {
+      fetch(`${cat}.html`)
+        .then(response => {
+          if (!response.ok) throw new Error(`الملف ${cat}.html غير موجود`);
+          return response.text();
+        })
+        .then(html => {
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const section = doc.querySelector('.section');
+          if (section) {
+            allHtml += section.outerHTML;
+          }
+          loaded++;
+          if (loaded === categories.length) {
+            area.innerHTML = `<div class="all-sections">${allHtml}</div>`;
+            document.querySelectorAll('.section').forEach(s => s.dataset.activeSub = 'all');
+            applyTypeFilter(currentType);
+            updateStats();
+            handleSearch();
+          }
+        })
+        .catch(error => {
+          console.error(`خطأ في تحميل ${cat}:`, error);
+          loaded++;
+          if (loaded === categories.length) {
+            area.innerHTML = `<div class="loader">❌ حدث خطأ في تحميل بعض الأقسام</div>`;
+          }
+        });
+    });
   }
 
-  // ===== تحميل قسم واحد (يُستخدم من شريط التنقل مباشرة) =====
+  // ===== تحميل قسم واحد =====
   function loadSingleCategory(categoryId) {
     const area = document.getElementById('content-area');
     document.getElementById('emptyState').style.display = 'none';
@@ -159,76 +185,22 @@
       });
   }
 
-  // ===== تحميل صفحة فرعية ضمن وضع "الكل" (قسم واحد فقط في كل مرة) =====
-  function loadAllPage(index) {
-    allPageIndex = ((index % CATEGORIES.length) + CATEGORIES.length) % CATEGORIES.length;
-    const cat = CATEGORIES[allPageIndex];
-    const area = document.getElementById('content-area');
-    document.getElementById('emptyState').style.display = 'none';
-    document.getElementById('searchInput').value = '';
-    area.innerHTML = '<div class="loader"><span>⏳</span> جاري التحميل...</div>';
-    renderPagination();
+  // ===== تحميل المحتوى =====
+  function loadCategory(categoryId, btn) {
+    document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+    if (btn) btn.classList.add('active');
 
-    fetch(`${cat.id}.html`)
-      .then(response => {
-        if (!response.ok) throw new Error(`الملف ${cat.id}.html غير موجود`);
-        return response.text();
-      })
-      .then(html => {
-        area.innerHTML = html;
-        document.querySelectorAll('.section').forEach(s => s.dataset.activeSub = 'all');
-        applyTypeFilter(currentType);
-        updateSectionCounts();
-        updateStats();
-        window.scrollTo({ top: document.getElementById('content-area').offsetTop - 130, behavior: 'smooth' });
-      })
-      .catch(error => {
-        console.error('خطأ في التحميل:', error);
-        area.innerHTML = `<div class="loader">❌ حدث خطأ في تحميل قسم ${cat.id}</div>`;
-      });
+    if (categoryId === 'all') {
+      currentMode = 'all';
+      loadAllPage();
+      ensureGlobalStats();
+    } else {
+      currentMode = 'single';
+      loadSingleCategory(categoryId);
+    }
   }
 
-  // ===== أزرار التنقل بين صفحات "الكل" =====
-  function goToAllPage(index) {
-    loadAllPage(index);
-  }
-
-  function renderPagination() {
-    const cat = CATEGORIES[allPageIndex];
-    const dots = CATEGORIES.map((c, i) =>
-      `<button class="page-dot ${i === allPageIndex ? 'active' : ''}" title="${c.label}" onclick="goToAllPage(${i})">${c.icon}</button>`
-    ).join('');
-
-    const html = `
-      <div class="pagination-bar">
-        <button class="page-arrow" onclick="goToAllPage(${allPageIndex - 1})" title="القسم السابق">›</button>
-        <div class="pagination-mid">
-          <div class="pagination-current">${cat.icon} ${cat.label}</div>
-          <div class="pagination-dots">${dots}</div>
-          <div class="pagination-count">${allPageIndex + 1} من ${CATEGORIES.length}</div>
-        </div>
-        <button class="page-arrow" onclick="goToAllPage(${allPageIndex + 1})" title="القسم التالي">‹</button>
-      </div>`;
-
-    ['allPagination', 'allPaginationBottom'].forEach(id => {
-      const el = document.getElementById(id);
-      el.innerHTML = html;
-      el.style.display = 'flex';
-    });
-  }
-
-  function hidePagination() {
-    ['allPagination', 'allPaginationBottom'].forEach(id => {
-      const el = document.getElementById(id);
-      el.style.display = 'none';
-      el.innerHTML = '';
-    });
-  }
-
-  // ===== حساب إجمالي المنتجات على مستوى الموقع (بدون تحميل الصور) =====
-  // نجلب ملفات الأقسام كنص فقط ونحلّلها بمحلل DOM منفصل غير متصل بالصفحة،
-  // فلا يتم طلب أي صورة من الشبكة، ويبقى العدّاد في الأعلى يعكس إجمالي الموقع
-  // بغض النظر عن أي صفحة فرعية معروضة حالياً.
+  // ===== حساب إجمالي المنتجات =====
   function ensureGlobalStats() {
     if (globalStats) {
       applyGlobalStatsToHero();
@@ -256,9 +228,6 @@
   }
 
   // ===== تحديث الإحصائيات =====
-  // في وضع "الكل" يبقى العدّاد في الأعلى يعكس إجمالي الموقع (من ensureGlobalStats)
-  // وما يتغيّر مع تنقّل الصفحات الفرعية أو الفلاتر. أما عند عرض قسم واحد من شريط
-  // التنقل مباشرة، فيعكس العدّاد عدد المنتجات الظاهرة في ذلك القسم فقط.
   function updateStats() {
     if (currentMode === 'single') {
       document.getElementById('boycottCount').textContent = document.querySelectorAll('.card.boycott:not(.hidden)').length;
@@ -268,10 +237,10 @@
 
   // ===== تحديث عدادات الأقسام =====
   function updateSectionCounts() {
-    ['food', 'personal', 'cleaning', 'tech', 'clothing', 'restaurants', 'sports'].forEach(id => {
-      const countEl = document.getElementById('count-' + id);
+    CATEGORIES.forEach(cat => {
+      const countEl = document.getElementById('count-' + cat.id);
       if (!countEl) return;
-      const sec = document.getElementById('sec-' + id);
+      const sec = document.getElementById('sec-' + cat.id);
       const visible = sec ? sec.querySelectorAll('.card:not(.hidden)').length : 0;
       countEl.textContent = visible + ' منتج';
     });
@@ -288,14 +257,12 @@
 
   // ===== تطبيق الفلتر الأساسي والفرعي معاً =====
   function applyTypeFilter(type) {
-    // 1. فلتر النوع (داعم/غير داعم)
     document.querySelectorAll('.card').forEach(card => {
       card.classList.remove('hidden');
       if (type === 'boycott' && !card.classList.contains('boycott')) card.classList.add('hidden');
       if (type === 'safe' && !card.classList.contains('safe')) card.classList.add('hidden');
     });
 
-    // 2. فلتر الفئة الفرعية (على مستوى البطاقات)
     document.querySelectorAll('.section').forEach(section => {
       const activeSub = section.dataset.activeSub;
       if (activeSub && activeSub !== 'all') {
@@ -314,7 +281,7 @@
     updateStats();
   }
 
-  // ===== فلتر الفئة الفرعية (Sub-filter) =====
+  // ===== فلتر الفئة الفرعية =====
   function filterSubCategory(sectionId, sub, btn) {
     const section = document.getElementById('sec-' + sectionId);
     if (!section) return;
@@ -328,32 +295,60 @@
   }
 
   // ===== البحث =====
+  // يعرض المنتجات المطابقة فقط في شبكة واحدة مسطّحة، بدون أي عناوين أقسام
+  // أو تجميع حسب الفئة — البحث يرجّع "منتجات" لا "أصناف".
   function handleSearch() {
     const query = document.getElementById('searchInput').value.trim().toLowerCase();
-    const cards = document.querySelectorAll('.card');
-    
+    const contentArea = document.getElementById('content-area');
+    const resultsGrid = document.getElementById('searchResultsGrid');
+    const resultsInfo = document.getElementById('searchResultsInfo');
+    const emptyState = document.getElementById('emptyState');
+
     if (!query) {
-      cards.forEach(c => c.classList.remove('hidden'));
+      resultsGrid.style.display = 'none';
+      resultsGrid.innerHTML = '';
+      resultsInfo.style.display = 'none';
+      contentArea.style.display = '';
+      emptyState.style.display = 'none';
       applyTypeFilter(currentType);
+      if (currentMode === 'all') {
+        applyGlobalStatsToHero();
+      } else {
+        updateStats();
+      }
       return;
     }
 
-    let found = 0;
-    cards.forEach(card => {
+    // نبحث بين كل بطاقات المنتجات المُحمَّلة حالياً (سواء كنا بوضع "الكل" أو قسم واحد)
+    const allCards = contentArea.querySelectorAll('.card');
+    const matches = [];
+    allCards.forEach(card => {
       const text = card.textContent.toLowerCase();
-      if (text.includes(query)) {
-        card.classList.remove('hidden');
-        found++;
-      } else {
-        card.classList.add('hidden');
-      }
+      const matchesQuery = text.includes(query);
+      const matchesType = currentType === 'all'
+        || (currentType === 'boycott' && card.classList.contains('boycott'))
+        || (currentType === 'safe' && card.classList.contains('safe'));
+      if (matchesQuery && matchesType) matches.push(card);
     });
-    document.getElementById('emptyState').style.display = found === 0 ? 'block' : 'none';
-    updateSectionCounts();
-    updateStats();
+
+    contentArea.style.display = 'none';
+    resultsGrid.innerHTML = '';
+    matches.forEach(card => resultsGrid.appendChild(card.cloneNode(true)));
+    resultsGrid.classList.remove('list-view');
+    if (isListView) resultsGrid.classList.add('list-view');
+    resultsGrid.style.display = matches.length ? 'grid' : 'none';
+
+    resultsInfo.textContent = matches.length ? `${matches.length} نتيجة` : '';
+    resultsInfo.style.display = matches.length ? 'block' : 'none';
+
+    emptyState.style.display = matches.length === 0 ? 'block' : 'none';
+
+    document.getElementById('boycottCount').textContent = matches.filter(c => c.classList.contains('boycott')).length;
+    document.getElementById('safeCount').textContent = matches.filter(c => c.classList.contains('safe')).length;
   }
 
-  document.getElementById('searchInput').addEventListener('input', handleSearch);
+  // ملاحظة: الاستماع لحدث البحث موجود أصلاً عبر oninput في عنصر input بالأعلى،
+  // فلا داعي لإضافة addEventListener مكرر هنا (كان يشغّل handleSearch مرتين لكل حرف).
 
   // ===== تبديل العرض =====
   function toggleView() {

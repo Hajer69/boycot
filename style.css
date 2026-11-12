@@ -229,6 +229,8 @@ header {
 /* ===== المحتوى الرئيسي ===== */
 .main { max-width: 1200px; margin: 0 auto; padding: 20px 16px 40px; }
 
+.search-results-info { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
+
 /* ===== LEGEND (مبسط) ===== */
 .legend { 
   background: var(--bg-secondary); 
@@ -250,54 +252,65 @@ header {
 /* ===== شريط التنقل بين الأقسام الفرعية (وضع "الكل") ===== */
 .all-pagination { display: flex; justify-content: center; margin-bottom: 20px; }
 .pagination-bar {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 14px;
-  padding: 10px 18px;
+  padding: 12px 16px;
   width: 100%;
-  max-width: 560px;
+  max-width: 720px;
+}
+.pagination-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 .page-arrow {
   flex-shrink: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 20px;
   border: 1px solid var(--border-color);
   background: var(--bg-card);
   color: var(--text-primary);
-  font-size: 1.1rem;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.8rem;
+  padding: 6px 14px;
   cursor: pointer;
   transition: 0.2s;
+  white-space: nowrap;
+}
+.page-arrow .arrow-ic { font-size: 0.7rem; color: var(--red-light); }
+.page-arrow:hover { border-color: var(--red-light); }
+.pagination-current { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pagination-count { font-weight: 400; font-size: 0.7rem; color: var(--text-muted); }
+.pagination-chips { display: flex; justify-content: center; gap: 6px; flex-wrap: wrap; }
+.page-chip {
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-.page-arrow:hover { border-color: var(--red-light); color: var(--red-light); }
-.pagination-mid { flex: 1; text-align: center; min-width: 0; }
-.pagination-current { font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pagination-dots { display: flex; justify-content: center; gap: 4px; flex-wrap: wrap; }
-.page-dot {
-  border: none;
+  gap: 4px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
   background: transparent;
-  font-size: 0.85rem;
-  opacity: 0.4;
+  color: var(--text-muted);
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.75rem;
   cursor: pointer;
-  padding: 2px 4px;
-  border-radius: 6px;
   transition: 0.2s;
-  line-height: 1;
+  white-space: nowrap;
 }
-.page-dot:hover { opacity: 0.75; }
-.page-dot.active { opacity: 1; background: rgba(198, 40, 40, 0.15); }
-.pagination-count { font-size: 0.65rem; color: var(--text-muted); margin-top: 4px; }
+.page-chip .nav-icon { font-size: 0.9rem; }
+.page-chip:hover { color: var(--text-primary); border-color: #555; }
+.page-chip.active { color: var(--red-light); background: rgba(198, 40, 40, 0.12); border-color: rgba(198, 40, 40, 0.4); }
 
 @media (max-width: 600px) {
-  .pagination-bar { padding: 8px 12px; gap: 8px; }
-  .page-arrow { width: 28px; height: 28px; font-size: 0.95rem; }
-  .pagination-current { font-size: 0.8rem; }
+  .pagination-top { flex-wrap: wrap; }
+  .pagination-current { order: -1; width: 100%; margin-bottom: 6px; }
+  .page-arrow { font-size: 0.7rem; padding: 5px 10px; }
+  .pagination-chips { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; }
 }
 
 /* ===== الأقسام ===== */
@@ -380,7 +393,7 @@ header {
   width: 80px; 
   height: 80px; 
   border-radius: 10px; 
-  background: var(--bg-primary); 
+  background: #FFFFFF; 
   overflow: hidden;
   display: flex;
   align-items: center;

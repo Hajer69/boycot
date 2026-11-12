@@ -8,138 +8,1549 @@
     <span class="section-count" id="count-food">٠</span>
   </div>
 
-  <!-- ===== شريط التصفية الفرعي (Sub-filter) ===== -->
-  <div class="sub-filter">
-    <button class="sub-btn active" data-section="food" data-sub="all" onclick="filterSubCategory('food', 'all', this)">🏷️ الكل</button>
-    <button class="sub-btn" data-section="food" data-sub="drinks" onclick="filterSubCategory('food', 'drinks', this)">🥤 مشروبات</button>
-    <button class="sub-btn" data-section="food" data-sub="coffee" onclick="filterSubCategory('food', 'coffee', this)">☕ قهوة</button>
-    <button class="sub-btn" data-section="food" data-sub="fastfood" onclick="filterSubCategory('food', 'fastfood', this)">🍟 وجبات سريعة</button>
-    <button class="sub-btn" data-section="food" data-sub="snacks" onclick="filterSubCategory('food', 'snacks', this)">🍪 وجبات خفيفة</button>
-    <button class="sub-btn" data-section="food" data-sub="chocolate" onclick="filterSubCategory('food', 'chocolate', this)">🍫 شكلاته</button>
-  </div>
+  <!-- ===== شريط التصفية الفرعي ===== -->
+<div class="sub-filter">
+  <button type="button" class="sub-btn active" data-section="food" data-sub="all" onclick="filterSubCategory('food', 'all', this, event)">🏷️ الكل</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="drinks" onclick="filterSubCategory('food', 'drinks', this, event)">🥤 مشروبات</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="snacks" onclick="filterSubCategory('food', 'snacks', this, event)">🍪 وجبات خفيفة</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="chocolate" onclick="filterSubCategory('food', 'chocolate', this, event)">🍫 شوكولاتة</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="dairy" onclick="filterSubCategory('food', 'dairy', this, event)">🧀 ألبان وأجبان</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="sauces" onclick="filterSubCategory('food', 'sauces', this, event)">🥫 صلصات وبهارات</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="cereal" onclick="filterSubCategory('food', 'cereal', this, event)">🌾 حبوب وإفطار</button>
+  <button type="button" class="sub-btn" data-section="food" data-sub="pet" onclick="filterSubCategory('food', 'pet', this, event)">🐾 طعام الحيوانات</button>
+</div>
 
+  <!-- ========================================================== -->
   <!-- ===== 1. المشروبات (data-sub="drinks") ===== -->
+  <!-- ========================================================== -->
   <div class="product-grid" data-sub="drinks">
-    <div class="card boycott" data-sub="drinks">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwasmenia.com%2F_next%2Fimage%3Furl%3Dhttps%253A%252F%252Fstrapi.wasmenia.com%252Fuploads%252FCoca_Cola_01_0a88e536ad.svg%26w%3D828%26q%3D75&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Coca-Cola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
-        <div class="card-info"><div class="card-name">Coca-Cola</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
 
+    <!-- ===== المنتجات الموجودة سابقاً ===== -->
     <div class="card boycott" data-sub="drinks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F30%2F1%2Fpepsi-vertical-logo-png_seeklogo-301642.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Pepsi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍋</span></div>
-        <div class="card-info"><div class="card-name">Pepsi</div></div>
+        <div class="card-logo"><img src="images/food/acqua-panna.webp" alt="Acqua Panna" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Acqua Panna أكوا بانا</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="drinks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSbtAUkMjA-owGKyRk-7eTcWVzBbnsifj3HX62in_RXTpj2AOaf77HNaU9O%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Tropicana" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
-        <div class="card-info"><div class="card-name">Tropicana</div></div>
+        <div class="card-logo"><img src="images/food/actimel.webp" alt="Actimel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Actimel أكتيميل</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
-    <div class="card safe" data-sub="drinks">
+    <div class="card boycott" data-sub="drinks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQWvz__XBzrwVw5Onaua73nfSqUBOhxNHPZC-dsOMW0PQ%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="عصائر طبيعية" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌿</span></div>
-        <div class="card-info"><div class="card-name">عصائر طبيعية</div></div>
-        <span class="card-badge badge-safe">✅ آمن</span>
+        <div class="card-logo"><img src="images/food/activia.webp" alt="Activia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Activia أكتيفيا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ades.webp" alt="Ades" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Ades أديس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/alfamino.webp" alt="Alfamino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍼</span></div>
+        <div class="card-info"><div class="card-name">Alfamino ألفامينو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/al-manhal.webp" alt="Al Manhal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Al Manhal المنهل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/alpro.webp" alt="Alpro" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Alpro ألبرو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/alsafi-danone.webp" alt="AlSafi Danone" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">AlSafi Danone الصافي دانون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/aqua.webp" alt="AQUA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">AQUA أكوا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/aquafina.webp" alt="Aquafina" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Aquafina أكوافينا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/arwa.webp" alt="Arwa" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Arwa أروى</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/aw.webp" alt="A&W" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">A&W إيه أند دبليو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/bang.webp" alt="Bang" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Bang بانج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/barbican.webp" alt="Barbican" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍺</span></div>
+        <div class="card-info"><div class="card-name">Barbican باربيكان</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/boost.webp" alt="Boost" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Boost بوست</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/brooke-bond.webp" alt="Brooke Bond" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Brooke Bond بروك بوند</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/burn.webp" alt="Burn" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Burn بيرن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cafe-hag.webp" alt="Café HAG" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Café HAG كافيه هاج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/canada-dry.webp" alt="Canada Dry" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Canada Dry كندا دراي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cappy.webp" alt="Cappy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Cappy كابي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/capri-sun.webp" alt="Capri-Sun" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Capri-Sun كابري سن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/carnation.webp" alt="Carnation" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Carnation كارنيشن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/celsius-live-fit.webp" alt="Celsius Live Fit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Celsius Live Fit سيلسيوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ceres.webp" alt="Ceres" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Ceres سيريس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ciel.webp" alt="Ciel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Ciel سيل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/coca-cola.webp" alt="Coca-Cola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Coca-Cola كوكاكولا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/crush.webp" alt="Crush" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Crush كراش</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/danette.webp" alt="Danette" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Danette دانيت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/danone.webp" alt="Danone" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Danone دانون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dasani.webp" alt="Dasani" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Dasani داساني</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/diet-coke.webp" alt="Diet Coke" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Diet Coke دايت كوك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dr-pepper.webp" alt="Dr Pepper" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Dr Pepper دكتور بيبر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/erikli.webp" alt="Erikli" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Erikli إريكلي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ethos-water.webp" alt="Ethos Water" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Ethos Water إيثوس ووتر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/evian.webp" alt="Evian" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Evian إفيان</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fanta.webp" alt="Fanta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Fanta فانتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fiji-water.webp" alt="FIJI Water" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">FIJI Water مياه فيجي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/frappuccino.webp" alt="Frappuccino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Frappuccino فرابوتشينو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fruice.webp" alt="Fruice" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Fruice فرويس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/full-throttle.webp" alt="Full Throttle" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Full Throttle فول ثروتيل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fuzetea.webp" alt="FuzeTea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">FuzeTea فيوز تي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/gatorade.webp" alt="Gatorade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Gatorade جايتورايد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ghadir.webp" alt="Ghadir" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Ghadir غدير</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hawai.webp" alt="Hawai" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Hawai هواوي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hayat.webp" alt="Hayat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Hayat حياة</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hayatna.webp" alt="Hayatna" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Hayatna حياتنا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/honest.webp" alt="Honest" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Honest هونست</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hornimans.webp" alt="Hornimans" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Hornimans هورنيمانز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/izze.webp" alt="IZZE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">IZZE إيزي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/jacobs.webp" alt="Jacobs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Jacobs جاكوبس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kinley.webp" alt="Kinley" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Kinley كينلي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lifeway.webp" alt="Lifeway" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Lifeway لايف واي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lipton-ice-tea.webp" alt="Lipton Ice Tea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Lipton Ice Tea ليبتون أيس تي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milo.webp" alt="Milo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Milo ميلو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/mirinda.webp" alt="Mirinda" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Mirinda ميرندا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/moccona.webp" alt="Moccona" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Moccona موكونا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/monster-energy.webp" alt="Monster Energy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Monster Energy مونستر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/mother.webp" alt="Mother" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Mother ماذر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/mountain-dew.webp" alt="Mountain Dew" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Mountain Dew ماونتن ديو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/naked.webp" alt="Naked" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Naked نيكد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nan.webp" alt="NAN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍼</span></div>
+        <div class="card-info"><div class="card-name">NAN نان</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nescafe.webp" alt="Nescafé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Nescafé نسكافيه</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nesquik.webp" alt="Nesquik" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Nesquik نسكويك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nestea.webp" alt="Nestea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Nestea نيستيها / نيس تي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nestle-infant-formula.webp" alt="Nestlé Infant Formulas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍼</span></div>
+        <div class="card-info"><div class="card-name">Nestlé Infant Formulas حليب أطفال نستلة</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nestle-pure-life.webp" alt="Nestlé Pure Life" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Nestlé Pure Life نستلة بيور لايف</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nido.webp" alt="Nido" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Nido نيدو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nos-energy.webp" alt="NOS Energy Drink" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">NOS Energy Drink نوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/pepsi.webp" alt="Pepsi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍋</span></div>
+        <div class="card-info"><div class="card-name">Pepsi بيبسي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/perrier.webp" alt="Perrier" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Perrier بيرييه</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/poms.webp" alt="Poms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Poms بومس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/powerade.webp" alt="Powerade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Powerade باوريد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/qj-storm.webp" alt="QJ Storm" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">QJ Storm</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/rani.webp" alt="Rani" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Rani راني</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/rc-cola.webp" alt="RC Cola" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">RC Cola آر سي كولا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/reign.webp" alt="Reign" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Reign رين</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/relentless.webp" alt="Relentless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Relentless ريلينتليس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/royal-bliss.webp" alt="Royal Bliss" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Royal Bliss رويال بليس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/s-pellegrino.webp" alt="S.Pellegrino" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">S.Pellegrino سان بيليغرينو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/safia.webp" alt="Safia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Safia صَافية</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/schweppes.webp" alt="Schweppes" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Schweppes شويبس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/7up.webp" alt="7Up" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">7Up سفن أب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/shani.webp" alt="Shani" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Shani شاني</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sirma.webp" alt="Sirma" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Sirma سيرما</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/snapple.webp" alt="Snapple" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Snapple سنابل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sohat.webp" alt="Sohat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Sohat صحة</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sprite.webp" alt="Sprite" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Sprite سبرايت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sting-energy.webp" alt="Sting Energy Drink" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">⚡</span></div>
+        <div class="card-info"><div class="card-name">Sting Energy Drink ستينج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sunkist.webp" alt="Sunkist" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Sunkist سنكست</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sustagen.webp" alt="Sustagen" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Sustagen سوستاجين</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/teem.webp" alt="Teem" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Teem تيم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/thums-up.webp" alt="Thums Up" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥤</span></div>
+        <div class="card-info"><div class="card-name">Thums Up ثامس أب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tropicana.webp" alt="Tropicana" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍊</span></div>
+        <div class="card-info"><div class="card-name">Tropicana تروبيكانا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/vimto.webp" alt="Vimto" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Vimto فيمتو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/vittel.webp" alt="Vittel" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Vittel فيتيل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/volvic.webp" alt="Volvic" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">💧</span></div>
+        <div class="card-info"><div class="card-name">Volvic فولفيك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== مشروبات جديدة ===== -->
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kool-aid.webp" alt="Kool-Aid" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Kool-Aid كول أيد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tang.webp" alt="TANG" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">TANG تانج</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/maxwell-house.webp" alt="MAXWELL HOUSE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">MAXWELL HOUSE ماكسويل هاوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/coffee-mate.webp" alt="Coffee mate" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Coffee mate كوفي ميت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/folgers.webp" alt="Folgers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
+        <div class="card-info"><div class="card-name">Folgers فولجرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lipton.webp" alt="Lipton" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Lipton ليبتون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/horlicks.webp" alt="Horlicks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Horlicks هورليكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/oatly.webp" alt="OATLY!" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">OATLY! أوتلي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - مشروبات ===== -->
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/maggi.webp" alt="Maggi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍵</span></div>
+        <div class="card-info"><div class="card-name">Maggi ماجي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cerelac.webp" alt="Cerelac" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍼</span></div>
+        <div class="card-info"><div class="card-name">Cerelac سيريلاك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nestle-condensed-milk.webp" alt="Nestlé Condensed Milk" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Nestlé Condensed Milk حليب نستله المكثف</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/smarties.webp" alt="SMARTIES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">SMARTIES سمارتيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/yorkie.webp" alt="YORKIE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">YORKIE يوركي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/damak.webp" alt="damak" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">damak داماك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sadia.webp" alt="Sadia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧃</span></div>
+        <div class="card-info"><div class="card-name">Sadia ساديا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hilal.webp" alt="Hilal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Hilal هلال</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sahtein.webp" alt="Sahtein" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Sahtein صحتين</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/perdix.webp" alt="PERDIX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥚</span></div>
+        <div class="card-info"><div class="card-name">PERDIX بيرديكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="drinks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/banvit.webp" alt="Banvit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍗</span></div>
+        <div class="card-info"><div class="card-name">Banvit بانفيت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ===== 2. قهوة (data-sub="coffee") ===== -->
-  <div class="product-grid" data-sub="coffee">
-    <div class="card boycott" data-sub="coffee">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F16%2F1%2Fstarbucks-logo-png_seeklogo-168511.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Starbucks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">☕</span></div>
-        <div class="card-info"><div class="card-name">Starbucks</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-
-    <div class="card boycott" data-sub="coffee">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F26%2F1%2Fnescafe-logo-png_seeklogo-265210.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Nescafé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫘</span></div>
-        <div class="card-info"><div class="card-name">Nescafé</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-
-    <div class="card safe" data-sub="coffee">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSHahBz1_C5sL4Dqv1NgwyKAOcbFmjsvKs8qhHXoUsN3w%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="قهوة عربية" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫖</span></div>
-        <div class="card-info"><div class="card-name">قهوة عربية</div></div>
-        <span class="card-badge badge-safe">✅ آمن</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== 3. وجبات سريعة (data-sub="fastfood") ===== -->
-  <div class="product-grid" data-sub="fastfood">
-    <div class="card boycott" data-sub="fastfood">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTJ793la9C7Kct4fryKSOEjSon2EyC2g3lPqG2T6a0QRg%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="McDonald's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍔</span></div>
-        <div class="card-info"><div class="card-name">McDonald's</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-
-    <div class="card boycott" data-sub="fastfood">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQdvxa3FRKa55FIt6h2TUp-n5af9BMWUG__qKqEBsjYLXZAijmw1log26s%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Pizza Hut" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍕</span></div>
-        <div class="card-info"><div class="card-name">Pizza Hut</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-
-    <div class="card boycott" data-sub="fastfood">
-      <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fplay-lh.googleusercontent.com%2FZm1sAqscPpV02Rkl302ERjzrS1boDH-X6TquFyi5V2IjZb1KQ8pacA042c-4whaQ6DC_%3Dw600-h300-pc0xffffff-pd&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Subway" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥪</span></div>
-        <div class="card-info"><div class="card-name">Subway</div></div>
-        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- ===== 4. وجبات خفيفة (data-sub="snacks") ===== -->
+  <!-- ========================================================== -->
+  <!-- ===== 2. الوجبات الخفيفة (data-sub="snacks") ===== -->
+  <!-- ========================================================== -->
   <div class="product-grid" data-sub="snacks">
+
+    <!-- ===== المنتجات الموجودة سابقاً ===== -->
     <div class="card boycott" data-sub="snacks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSyzYXGtSOXK4IuR2FMSrfNLmd9393L-yMcba3lZBXLkQ%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Nestlé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Nestlé</div></div>
+        <div class="card-logo"><img src="images/food/nestle.webp" alt="Nestlé" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Nestlé نستله</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="snacks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcTlXMnktY6vr6vknqXtQvImb5zn-yiqKHJoLkj5581MheF6-Tix16zwdb9I%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Kellogg's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
-        <div class="card-info"><div class="card-name">Kellogg's</div></div>
+        <div class="card-logo"><img src="images/food/kelloggs.webp" alt="Kellogg's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Kellogg's كيلوجز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card safe" data-sub="snacks">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F0%2F1%2Fulker-logo-png_seeklogo-1322.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
-        <div class="card-info"><div class="card-name">Ülker</div></div>
+        <div class="card-logo"><img src="images/food/ulker.webp" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
+        <div class="card-info"><div class="card-name">Ülker ألكر</div></div>
         <span class="card-badge badge-safe">✅ آمن</span>
       </div>
     </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/chips-ahoy.webp" alt="Chips Ahoy!" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Chips Ahoy! تشيبس أهوي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fonzies.webp" alt="Fonzies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Fonzies فونزيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tuc.webp" alt="TUC" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">TUC توك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/ritz.webp" alt="RITZ" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">RITZ ريتز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/belvita.webp" alt="belVita" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">belVita بيلفيتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/oreo.webp" alt="OREO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">OREO أوريو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/barni.webp" alt="Barni" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Barni بارني</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/7-days.webp" alt="7 DAYS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥐</span></div>
+        <div class="card-info"><div class="card-name">7 DAYS سفن دايز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cheetos.webp" alt="Cheetos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Cheetos شيتوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/doritos.webp" alt="Doritos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Doritos دوريتوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lays.webp" alt="Lay's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥔</span></div>
+        <div class="card-info"><div class="card-name">Lay's لايز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/walkers.webp" alt="WALKERS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥔</span></div>
+        <div class="card-info"><div class="card-name">WALKERS ولكرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fritos.webp" alt="Fritos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Fritos فريتوس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sunbites.webp" alt="SUNBITES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">SUNBITES صن بايتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/bugles.webp" alt="BUGLES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">BUGLES بيوجلز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nature-valley.webp" alt="NATURE VALLEY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">NATURE VALLEY نيتشر فالي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cheez-it.webp" alt="CHEEZ-IT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">CHEEZ-IT تشيز إت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/pringles.webp" alt="PRINGLES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥔</span></div>
+        <div class="card-info"><div class="card-name">PRINGLES برينجلز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/pop-tarts.webp" alt="POP tarts" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍞</span></div>
+        <div class="card-info"><div class="card-name">POP tarts بوب تارتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/extra-gum.webp" alt="Extra" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Extra إكسترا (علكة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/doublemint.webp" alt="DOUBLEMINT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">DOUBLEMINT دبلمنت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hubba-bubba.webp" alt="Hubba Bubba" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Hubba Bubba هوبا بوبا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/skittles.webp" alt="Skittles" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Skittles سكيتلز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/bubblicious.webp" alt="Bubblicious" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Bubblicious ببليشس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sour-patch-kids.webp" alt="SOUR PATCH Kids" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">SOUR PATCH Kids ساور باتش كيدز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/jelly-belly.webp" alt="Jelly Belly" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Jelly Belly جيلي بيلي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nerds.webp" alt="NeRDs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">NeRDs نيردز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/trolli.webp" alt="Trolli" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Trolli ترولي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - وجبات خفيفة ===== -->
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lu-prince.webp" alt="LU Prince" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">LU Prince لو برنس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lu.webp" alt="LU" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">LU لو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nabisco.webp" alt="NABISCO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">NABISCO نابيسكو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/alpen.webp" alt="Alpen" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Alpen ألبين</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/halls.webp" alt="HALLS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">HALLS هالز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/clorets.webp" alt="Clorets" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">Clorets كلوريتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/bimo.webp" alt="bimo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">bimo بيمو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/5star.webp" alt="5Star" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">5Star فايف ستار</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/royal.webp" alt="Royal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍮</span></div>
+        <div class="card-info"><div class="card-name">Royal رويال</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/grenade.webp" alt="GRENADE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">GRENADE جرينيد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/clif.webp" alt="CLIF" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">CLIF كليف</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fontaneda.webp" alt="FONTANEDA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">FONTANEDA فونتانيدا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/freia.webp" alt="Freia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Freia فريا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/twisties.webp" alt="Twisties" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Twisties تويستيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/quavers.webp" alt="Quavers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Quavers كوافرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sabra.webp" alt="Sabra" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥣</span></div>
+        <div class="card-info"><div class="card-name">Sabra سابرا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tasali.webp" alt="Tasali" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
+        <div class="card-info"><div class="card-name">Tasali تسالى</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/rice-a-roni.webp" alt="RICE A RONI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍚</span></div>
+        <div class="card-info"><div class="card-name">RICE A RONI رايس أ روني</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/totinos.webp" alt="Totino's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍕</span></div>
+        <div class="card-info"><div class="card-name">Totino's توتينوز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/carrs.webp" alt="Carr's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Carr's كارز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/twinkies.webp" alt="Twinkies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍰</span></div>
+        <div class="card-info"><div class="card-name">Twinkies توينكيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/orville-redenbachers.webp" alt="Orville Redenbacher's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍿</span></div>
+        <div class="card-info"><div class="card-name">Orville Redenbacher's أورفيل ريدنباكرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/slim-jim.webp" alt="Slim Jim" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥓</span></div>
+        <div class="card-info"><div class="card-name">Slim Jim سليم جيم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/chef-boyardee.webp" alt="Chef BOYARDEE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍝</span></div>
+        <div class="card-info"><div class="card-name">Chef BOYARDEE شيف بوياردي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/healthy-choice.webp" alt="Healthy Choice" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥗</span></div>
+        <div class="card-info"><div class="card-name">Healthy Choice هيلثي تشويس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/essential-everyday.webp" alt="Essential EVERYDAY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Essential EVERYDAY إسينشال إيفريدي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/bertolli.webp" alt="BERTOLLI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫒</span></div>
+        <div class="card-info"><div class="card-name">BERTOLLI بيرتولي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hunts.webp" alt="Hunt's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Hunt's هانتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/schwartz.webp" alt="Schwartz" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌿</span></div>
+        <div class="card-info"><div class="card-name">Schwartz شوارنز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/arm-hammer.webp" alt="ARM & HAMMER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧂</span></div>
+        <div class="card-info"><div class="card-name">ARM & HAMMER أرم أند هامر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/planters.webp" alt="PLANTERS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
+        <div class="card-info"><div class="card-name">PLANTERS بلانترز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/crunch.webp" alt="Crunch" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Crunch كرانش</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/senyorita.webp" alt="Senyorita" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Senyorita سنيوريتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/americana.webp" alt="AMERICANA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">AMERICANA امريكانا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/california-garden.webp" alt="CALIFORNIA GARDEN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥗</span></div>
+        <div class="card-info"><div class="card-name">CALIFORNIA GARDEN كاليفورنيا جاردن</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/royal-ahlia.webp" alt="Royal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍮</span></div>
+        <div class="card-info"><div class="card-name">Royal رويال الأهلية</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/wonderful.webp" alt="The Wonderful Company" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥜</span></div>
+        <div class="card-info"><div class="card-name">The Wonderful Company ذا وندرفول</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kuwaitia.webp" alt="Kuwaitia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Kuwaitia كويتية</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/conagra.webp" alt="CONAGRA BRANDS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">CONAGRA BRANDS كوناجرا براندز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/crisco.webp" alt="Crisco" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🫒</span></div>
+        <div class="card-info"><div class="card-name">Crisco كريسكو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hebrew-national.webp" alt="Hebrew NATIONAL" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌭</span></div>
+        <div class="card-info"><div class="card-name">Hebrew NATIONAL هيبرو ناشيونال</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="snacks">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/green-giant.webp" alt="Green Giant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥦</span></div>
+        <div class="card-info"><div class="card-name">Green Giant العملاق الأخضر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
   </div>
 
-  <!-- ===== 5. شكلاته (data-sub="chocolate") ===== -->
+  <!-- ========================================================== -->
+  <!-- ===== 3. الشوكولاتة (data-sub="chocolate") ===== -->
+  <!-- ========================================================== -->
   <div class="product-grid" data-sub="chocolate">
-    <!-- مقاطعة -->
+
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbf1af2.akinoncloudcdn.com%2Fproducts%2F2024%2F09%2F20%2F134297%2Fa1fcded3-621f-4684-bf0e-3608cf486b9a_size3840_cropCenter.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/milky-bar.webp" alt="Milky bar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Milky bar (Nestlé)</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -147,7 +1558,7 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcT1UBYkTZZr-9oHkEA28Euuv7FiBLqZEqh-eg%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/kitkat.webp" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">KitKat (Nestlé) كيت كات</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -155,15 +1566,15 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fi5.walmartimages.com%2Fasr%2Fcf21ac32-fb7c-42fc-b346-5f5f95f9fa9b.dd9857ce0b53f0644a186f4254961122.jpeg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Bakers</div></div>
+        <div class="card-logo"><img src="images/food/bakers.webp" alt="Bakers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Bakers بيكرز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Ffamilybox.store%2Fcdn%2Fshop%2Fproducts%2Fhersheys-cookies-ncreme-43gr-enviar-a-venezuela-ship-to-venezuela-supermercado-online-venezuela-online-supermarket-405812.jpg%3Fv%3D1762531642%26width%3D800&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/hersheys.webp" alt="Hershey's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Hershey's هيرشيز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -171,39 +1582,39 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbf1af2.akinoncloudcdn.com%2Fproducts%2F2026%2F01%2F06%2F91269%2Fe615d0ed-efca-4709-be35-a02020c51d5f_size3840_cropCenter.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Ferrero Rocher</div></div>
+        <div class="card-logo"><img src="images/food/ferrero-rocher.webp" alt="Ferrero Rocher" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Ferrero Rocher فيريرو روشيه</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71HyZYaxgnL.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Raffaello</div></div>
+        <div class="card-logo"><img src="images/food/raffaello.webp" alt="Raffaello" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Raffaello رافايلو</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F71Prd-%2BpHrL._SL1500_.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">GuyLian</div></div>
+        <div class="card-logo"><img src="images/food/guylian.webp" alt="GuyLian" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">GuyLian غايليان</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcSCaS08ivxivmQ1nO3TNCM2cOVehiA9b66FXw%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Reese's</div></div>
+        <div class="card-logo"><img src="images/food/reeses.webp" alt="Reese's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Reese's ريسز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F61%2F1%2Fgalaxy-chocolate-logo-png_seeklogo-619032.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/galaxy.webp" alt="Galaxy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Galaxy جلاكسي</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -211,7 +1622,7 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F7%2F1%2Fkinder-ferrero-logo-png_seeklogo-78574.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/kinder.webp" alt="Kinder" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Kinder كندر</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -219,55 +1630,55 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbf1af2.akinoncloudcdn.com%2Fproducts%2F2026%2F01%2F09%2F91697%2F2b62254b-1b9c-46c2-bd0d-bc3fddf0efc5.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">lindt LINDOR</div></div>
+        <div class="card-logo"><img src="images/food/lindt.webp" alt="Lindt" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Lindt LINDOR ليندت</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.candy-store.cz%2Fdata%2Ftmp%2F3%2F1%2F13731_3.jpg%3F1652428683_1&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Aero</div></div>
+        <div class="card-logo"><img src="images/food/aero-chocolate.webp" alt="Aero" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Aero إيرو</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fbf1af2.akinoncloudcdn.com%2Fproducts%2F2024%2F09%2F10%2F97598%2Fd26baeb6-770f-427d-bdcd-36b2960ed4bf_size3840_cropCenter.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">crunchie</div></div>
+        <div class="card-logo"><img src="images/food/crunchie.webp" alt="crunchie" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Crunchie كرانشي</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fi.ebayimg.com%2Fimages%2Fg%2FLzAAAOSwojRnwZHG%2Fs-l1200.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Twix</div></div>
+        <div class="card-logo"><img src="images/food/twix.webp" alt="Twix" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Twix تويكس</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRKzbF-T4zihQKoAs1HX_6CeahDn1eu0yL8rg%26s&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">flake</div></div>
+        <div class="card-logo"><img src="images/food/flake.webp" alt="flake" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Flake فليك</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.sweetco.ie%2Fimage%2Fcache%2Fcatalog%2Fsweetco%2Fproduct%2Fcadburys%2Fcadbury-dairy-milk-bar-110g-800x800.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Cadbury</div></div>
+        <div class="card-logo"><img src="images/food/cadbury.webp" alt="Cadbury" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Cadbury كادبوري</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fthegourmetoutlet.in%2Fcdn%2Fshop%2Ffiles%2F9446113-1688643240263..png%3Fv%3D1700812847%26width%3D1445&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/snickers.webp" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Snickers سنيكرز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -275,7 +1686,7 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fcdn.mafrservices.com%2Fsys-master-root%2Fhed%2Fhba%2F9511640825886%2F356993_main.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-logo"><img src="images/food/mars-chocolate.webp" alt="Mars" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
         <div class="card-info"><div class="card-name">Mars مارس</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
@@ -283,59 +1694,772 @@
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fwww.britishcornershop.co.uk%2Fimg%2Flarge%2FCY0003.jpg&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">BOUNTY</div></div>
+        <div class="card-logo"><img src="images/food/bounty.webp" alt="BOUNTY" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">BOUNTY باونتي</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Falhabeebmarket.com%2Fstorage%2Fproduct%2F47502%2F50798.webp&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">TOLA</div></div>
+        <div class="card-logo"><img src="images/food/tola.webp" alt="TOLA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">TOLA تولا</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Frimibaltic-res.cloudinary.com%2Fimage%2Fupload%2Fb_white%2Cc_limit%2Cdpr_auto%2Cf_auto%2Cq_auto%3Alow%2Cw_auto%2Fd_ecommerce%3Abackend-fallback.png%2FMAT_194126_PCE_EE&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">maltesers</div></div>
+        <div class="card-logo"><img src="images/food/maltesers.webp" alt="maltesers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Maltesers مالتيزرز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fallcitycandy.com%2Fcdn%2Fshop%2Fproducts%2Fm_mmilkchocolatebagfront2_2048x.jpg%3Fv%3D1651519269&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">M and M's</div></div>
+        <div class="card-logo"><img src="images/food/mms.webp" alt="M and M's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">M and M's إم آند إمز</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
     <div class="card boycott" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fdocemalu.vtexassets.com%2Farquivos%2Fids%2F5370640%2Fc0b84f43cc9e589843ded92a5fdeb9a3fed6780a.jpg%3Fv%3D639021312267170000&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Snickers" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Toblerone</div></div>
+        <div class="card-logo"><img src="images/food/toblerone.webp" alt="Toblerone" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Toblerone توبليرون</div></div>
         <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
       </div>
     </div>
 
-    <!-- آمنة -->
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milka.webp" alt="Milka" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Milka ميلكا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cote-dor.webp" alt="CÔTE D'OR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">CÔTE D'OR كوت دور</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/marabou.webp" alt="Marabou" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Marabou مارابو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/daim.webp" alt="Daim" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Daim دايم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cadbury-flake.webp" alt="Cadbury Flake" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Cadbury Flake كادبوري فليك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/quality-street.webp" alt="Quality Street" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Quality Street كواليتي ستريت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/after-eight.webp" alt="After Eight" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">After Eight أفتر إيت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lion.webp" alt="LION" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">LION لايون</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/walnut-whip.webp" alt="Walnut Whip" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Walnut Whip والنت ويب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/matchmakers.webp" alt="MATCHMAKERS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">MATCHMAKERS ماتش ميكرز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/polo-mints.webp" alt="POLO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">POLO بولو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cailler.webp" alt="Cailler" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Cailler كايلر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nutella.webp" alt="nutella" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">nutella نوتيلا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tic-tac.webp" alt="tic tac" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍬</span></div>
+        <div class="card-info"><div class="card-name">tic tac تيك تاك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hanuta.webp" alt="hanuta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">hanuta هانوات</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milky-way.webp" alt="MilkyWay" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">MilkyWay ميلكي واي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/magnum.webp" alt="MAGNUM" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍦</span></div>
+        <div class="card-info"><div class="card-name">MAGNUM ماجنوم</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cornetto.webp" alt="Cornetto" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍦</span></div>
+        <div class="card-info"><div class="card-name">Cornetto كورنيتو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/viennetta.webp" alt="Viennetta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍦</span></div>
+        <div class="card-info"><div class="card-name">Viennetta فيينيتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/haagen-dazs.webp" alt="Häagen-Dazs" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍦</span></div>
+        <div class="card-info"><div class="card-name">Häagen-Dazs هاجن داز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
     <div class="card safe" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fimages.seeklogo.com%2Flogo-png%2F0%2F1%2Fulker-logo-png_seeklogo-1322.png&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Ülker (شوكولاتة)</div></div>
+        <div class="card-logo"><img src="images/food/ulker-chocolate.webp" alt="Ülker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Ülker ألكر (شوكولاتة)</div></div>
         <span class="card-badge badge-safe">✅ آمن</span>
       </div>
     </div>
 
     <div class="card safe" data-sub="chocolate">
       <div class="card-top">
-        <div class="card-logo"><img src="https://wsrv.nl/?url=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcQ1ygcXcBzPQ4GnClGPi1eBncUqBLI7IuJ-2w%26s%3D10&w=200&h=200&fit=cover&we=1&output=webp&q=80&default=1x1.png" alt="Patchi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
-        <div class="card-info"><div class="card-name">Patchi</div></div>
+        <div class="card-logo"><img src="images/food/patchi.webp" alt="Patchi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Patchi باتشي</div></div>
         <span class="card-badge badge-safe">✅ آمن</span>
       </div>
     </div>
+
+    <!-- ===== إضافات جديدة - شوكولاتة ===== -->
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milkybar-chocolate.webp" alt="Milkybar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Milkybar ميلكي بار</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/smarties-chocolate.webp" alt="SMARTIES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">SMARTIES سمارتيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/yorkie-chocolate.webp" alt="YORKIE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">YORKIE يوركي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/damak-chocolate.webp" alt="damak" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">damak داماك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dream-whip.webp" alt="Dream Whip" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Dream Whip دريم ويب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/farleys-rusks.webp" alt="Farley's Rusks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Farley's Rusks فارليز راسكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kitkat-chocolate.webp" alt="KitKat" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">KitKat كيت كات</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/after-eight-chocolate.webp" alt="After Eight" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">After Eight أفتر إيت (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milkybar-nestle.webp" alt="Milkybar" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Milkybar (Nestlé) ميلكي بار</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/daim-chocolate.webp" alt="Daim" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Daim دايم (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cote-dor-chocolate.webp" alt="CÔTE D'OR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">CÔTE D'OR كوت دور (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/toblerone-chocolate.webp" alt="Toblerone" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Toblerone توبليرون (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/marabou-chocolate.webp" alt="Marabou" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Marabou مارابو (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="chocolate">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/milka-chocolate.webp" alt="Milka" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">Milka ميلكا (شوكولاتة)</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
   </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 4. الألبان والأجبان (data-sub="dairy") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="dairy">
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kraft.webp" alt="Kraft" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Kraft كرافت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/velveeta.webp" alt="Velveeta" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Velveeta فيلفيتا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/philadelphia.webp" alt="PHILADELPHIA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">PHILADELPHIA فيلادلفيا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/la-vache-qui-rit.webp" alt="La vache qui rit" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">La vache qui rit البقرة الضاحكة</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/kiri.webp" alt="Kiri" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Kiri كيري</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - ألبان وأجبان ===== -->
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/abu-al-walad.webp" alt="Abu al-Walad" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Abu al-Walad جبنة أبو الولد</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sadia-dairy.webp" alt="Sadia" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧀</span></div>
+        <div class="card-info"><div class="card-name">Sadia ساديا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dream-whip-dairy.webp" alt="Dream Whip" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥛</span></div>
+        <div class="card-info"><div class="card-name">Dream Whip دريم ويب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/farleys-rusks-dairy.webp" alt="Farley's Rusks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Farley's Rusks فارليز راسكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="dairy">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/gerber.webp" alt="Gerber" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍼</span></div>
+        <div class="card-info"><div class="card-name">Gerber جيربر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 5. الصلصات والبهارات (data-sub="sauces") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="sauces">
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/heinz.webp" alt="HEINZ" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">HEINZ هاينز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hp-sauce.webp" alt="HP SAUCE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">HP SAUCE صلصة إتش بي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/knorr.webp" alt="Knorr" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Knorr كنور</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hellmanns.webp" alt="HELLMANN'S" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">HELLMANN'S هيلمانز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/colmans.webp" alt="Colman's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Colman's كولمانز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/maille.webp" alt="MAILLE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">MAILLE ميل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dolmio.webp" alt="DOLMIO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">DOLMIO دولميو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/miracoli.webp" alt="Miracoli" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Miracoli ميراكولي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - صلصات ===== -->
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/tasty-bite.webp" alt="TASTY BITE" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">TASTY BITE تيستي بايت</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/uncle-bens.webp" alt="Uncle Ben's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍚</span></div>
+        <div class="card-info"><div class="card-name">Uncle Ben's أرز بنس أونكل</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/maggi-sauce.webp" alt="Maggi" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Maggi ماجي</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/conagra-sauce.webp" alt="CONAGRA BRANDS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">CONAGRA BRANDS كوناجرا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="sauces">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/hunts-sauce.webp" alt="Hunt's" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥫</span></div>
+        <div class="card-info"><div class="card-name">Hunt's هانتس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 6. الحبوب والإفطار (data-sub="cereal") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="cereal">
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/corn-flakes.webp" alt="CORN FLAKES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">CORN FLAKES كورن فليكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/frosted-flakes.webp" alt="FROSTED FLAKES" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">FROSTED FLAKES فروستد فليكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/special-k.webp" alt="SPECIAL K" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">SPECIAL K سبيشال كيه</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/all-bran.webp" alt="All-Bran" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">All-Bran أول بران</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/eggo.webp" alt="Eggo" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🧇</span></div>
+        <div class="card-info"><div class="card-name">Eggo إيجو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/nesquik-cereal.webp" alt="Nesquik Cereal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Nesquik Cereal حبوب نسكويك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cheerios.webp" alt="Cheerios" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Cheerios تشيروز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fitness-cereal.webp" alt="Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Fitness فيتنس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/betty-crocker.webp" alt="Betty Crocker" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍰</span></div>
+        <div class="card-info"><div class="card-name">Betty Crocker بيتي كروكر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/weetabix.webp" alt="Weetabix" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Weetabix ويتابكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/quaker.webp" alt="QUAKER" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">QUAKER كويكر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - حبوب وإفطار ===== -->
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/chocapic.webp" alt="CHOCAPIC" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍫</span></div>
+        <div class="card-info"><div class="card-name">CHOCAPIC شوكابيك</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/green-giant-cereal.webp" alt="Green Giant" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥦</span></div>
+        <div class="card-info"><div class="card-name">Green Giant العملاق الأخضر</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cini-minis.webp" alt="Cini Minis" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🥐</span></div>
+        <div class="card-info"><div class="card-name">Cini Minis سيني مينيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cookie-crisp.webp" alt="Cookie Crisp" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍪</span></div>
+        <div class="card-info"><div class="card-name">Cookie Crisp كوكي كريسب</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/golden-grahams.webp" alt="Golden Grahams" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Golden Grahams جولدن جراهامز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/lucky-charms.webp" alt="Lucky Charms" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🍀</span></div>
+        <div class="card-info"><div class="card-name">Lucky Charms لاكي شارمز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/trix.webp" alt="Trix" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌈</span></div>
+        <div class="card-info"><div class="card-name">Trix تريكس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/wheaties.webp" alt="Wheaties" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Wheaties ويتيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/cheerios-cereal.webp" alt="Cheerios" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌽</span></div>
+        <div class="card-info"><div class="card-name">Cheerios تشيروز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="cereal">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/fitness-cereal.webp" alt="Fitness" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🌾</span></div>
+        <div class="card-info"><div class="card-name">Fitness فيتنس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================== -->
+  <!-- ===== 7. طعام الحيوانات (data-sub="pet") ===== -->
+  <!-- ========================================================== -->
+  <div class="product-grid" data-sub="pet">
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/friskies.webp" alt="Friskies" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐱</span></div>
+        <div class="card-info"><div class="card-name">Friskies فريسكيز</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/alpo.webp" alt="ALPO" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐶</span></div>
+        <div class="card-info"><div class="card-name">ALPO ألبو</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/dentalife.webp" alt="Dentalife" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐶</span></div>
+        <div class="card-info"><div class="card-name">Dentalife دينتالايف</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/whiskas.webp" alt="whiskas" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐱</span></div>
+        <div class="card-info"><div class="card-name">whiskas ويسكاس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/royal-canin.webp" alt="ROYAL CANIN" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐶</span></div>
+        <div class="card-info"><div class="card-name">ROYAL CANIN رويال كنان</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/sheba.webp" alt="SHEBA" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐱</span></div>
+        <div class="card-info"><div class="card-name">SHEBA شيبا</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+    <!-- ===== إضافات جديدة - طعام الحيوانات ===== -->
+    <div class="card boycott" data-sub="pet">
+      <div class="card-top">
+        <div class="card-logo"><img src="images/food/thomas-pet.webp" alt="THOMAS" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="fallback-emoji" style="display:none;">🐱</span></div>
+        <div class="card-info"><div class="card-name">THOMAS توماس</div></div>
+        <span class="card-badge badge-boycott">🚫 مُقاطَع</span>
+      </div>
+    </div>
+
+  </div>
+
 </section>
